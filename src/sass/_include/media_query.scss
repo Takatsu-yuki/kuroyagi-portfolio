@@ -1,20 +1,7 @@
-$-responsive-threshold1: 768px;
-$-responsive-threshold2: 1200px;
+$-responsive-threshold1: 960px;
 
 @mixin lg {
-  @media screen and (min-width: #{$-responsive-threshold2 + 1}) {
-    @content;
-  }
-}
-
-@mixin md-lg {
   @media screen and (min-width: #{$-responsive-threshold1 + 1}) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media screen and (min-width: #{$-responsive-threshold1 + 1}) and (max-width: #{$-responsive-threshold2}) {
     @content;
   }
 }
@@ -27,12 +14,6 @@ $-responsive-threshold2: 1200px;
 
 @mixin no-sm {
   @include sm {
-    display: none !important;
-  }
-}
-
-@mixin no-md {
-  @include md {
     display: none !important;
   }
 }

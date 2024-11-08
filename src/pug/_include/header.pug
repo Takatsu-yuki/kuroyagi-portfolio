@@ -2,24 +2,30 @@ header.global-header
   .bar
     .main
       figure.logo
-      a.x(href="#")
-      a.instagram(href="#")
+      .sns
+        a.x(href="#")
+        a.instagram(href="#")
     .hamburger
       span 
       span 
       span 
   nav
-    ul
-      li
-        a(href="#") 
-      li
-        a(href="#") 
-      li
-        a(href="#") 
-      li
-        a(href="#") 
-      li
-        a(href="#") 
-    .extra.sm-only
-      .hash #SAKE_AND_GYOZA
-      .instagram
+    .inner
+      ul
+        li
+          a.en(href="#") TOP
+        li
+          a.en(href="#") TOPICS
+        li
+          a.en(href="#") WORK
+          .ja
+            a(href="#") ゲーム・TCG向け
+            a(href="#") 児童書向け
+        li
+          a.en(href="#") CONTACT
+        li
+          a.en(href="#") PROFILE
+      .sns
+        a.x(href="#")
+          include ../assets/img/common/x.svg
+        a.instagram(href="#")

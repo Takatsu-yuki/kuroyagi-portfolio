@@ -1,11 +1,27 @@
-@mixin regular() {
+$-font-ja: "Noto Sans JP", sans-serif;
+$-font-en: "Mohave", serif;
+
+@mixin serif-regular() {
   font-weight: 400;
+  font-family: $-font-ja;
 }
 
-@mixin medium() {
+@mixin serif-medium() {
   font-weight: 500;
+  font-family: $-font-ja;
 }
 
-@mixin semi-bold() {
+@mixin serif-semi-bold() {
   font-weight: 600;
+  font-family: $-font-ja;
+}
+
+@mixin en-regular() {
+  font-weight: 500;
+  font-family: $-font-en;
+}
+
+@mixin en-midium() {
+  font-weight: 600;
+  font-family: $-font-en;
 }
