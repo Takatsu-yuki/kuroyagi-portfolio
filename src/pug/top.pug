@@ -3,4 +3,8 @@ extends _template/_base
 block vars
   - lev1ID = "top";
 
+  block links
+    link(href=`${pathToCSS}top.css${hash}`, rel="stylesheet", type="text/css")
+
 block main
+  include top/fv.pug

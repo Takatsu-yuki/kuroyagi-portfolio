@@ -20,7 +20,6 @@ export default makeConfig({
     data: [],
     files: {
       "index.html": "top.pug",
-      "sub.html": "sub.pug",
     },
   },
   sass: {
@@ -28,6 +27,7 @@ export default makeConfig({
     dest: join(DIR_ASSETS, "css"),
     files: {
       "main.css": "main.scss",
+      "top.css": "top.scss",
     },
   },
   ts: {
