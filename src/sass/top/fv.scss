@@ -13,9 +13,11 @@ section.fv {
   display: flex;
   width: 100%;
   height: 90vh;
+  margin-bottom: 100px;
 
   @include mq.sm {
     flex-direction: column;
+    margin-bottom: 60px;
   }
 
   a {

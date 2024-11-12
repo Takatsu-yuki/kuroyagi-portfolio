@@ -1,0 +1,181 @@
+@use "sass:meta";
+@use "sass:math";
+@use "../_include/color";
+@use "../_include/decoration";
+@use "../_include/ease";
+@use "../_include/media_query" as mq;
+@use "../_include/path";
+@use "../_include/typography";
+@use "../_include/vw";
+@use "../_include/geom";
+
+section.work {
+  margin-bottom: 100px;
+  padding-inline: 100px;
+
+  @include mq.sm {
+    margin-bottom: 60px;
+  }
+  .inner {
+    --padding-inline: 120px;
+    margin: 0 auto;
+    background-color: var(--color-black);
+    border-radius: 50px;
+    padding: 86px var(--padding-inline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: calc(1232px - var(--padding-inline) * 2);
+  }
+  .info {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 35%;
+    .en {
+      @include typography.en-regular;
+      font-size: min(vw.lg(110), 110px);
+    }
+    .ja {
+      @include typography.serif-bold;
+      font-size: 20px;
+    }
+    p {
+      @include typography.serif-bold;
+      font-size: 20px;
+      line-height: 2;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    gap: 20px;
+    a {
+      text-decoration: none;
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+
+      @include mq.sm {
+        height: 50%;
+        width: 100%;
+      }
+
+      .button {
+        top: 0;
+        left: 0;
+        height: 223px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 15px;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        position: relative;
+        z-index: 1;
+
+        .arrow {
+          --arrow-size: 70px;
+          width: var(--arrow-size);
+          height: var(--arrow-size);
+          flex-shrink: 0;
+          display: grid;
+          place-content: center;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: var(--color-white);
+            aspect-ratio: 1 /1;
+            height: var(--arrow-size);
+            border-radius: 100px;
+            z-index: -1;
+            transition: 0.3s;
+          }
+          @include mq.sm {
+            --arrow-size: 54px;
+          }
+        }
+
+        h3 {
+          width: 100%;
+        }
+
+        .en {
+          @include typography.en-regular;
+          font-size: 60px;
+          word-break: keep-all;
+
+          @include mq.sm {
+            font-size: 40px;
+          }
+
+          span {
+            font-size: 51px;
+            @include mq.sm {
+              font-size: 34px;
+            }
+          }
+        }
+
+        .ja {
+          @include typography.serif-bold;
+        }
+      }
+
+      &.tcg {
+        & figure {
+          width: 100%;
+          height: 100%;
+          @include path.bg-img("common/fv-tcg.png", cover);
+          background-position: 50% 32%;
+          transition: 1s;
+          position: absolute;
+        }
+
+        @include mq.has-hover {
+          &:hover .arrow::after {
+            background-color: var(--color-blue);
+            transform: scale(1.3);
+          }
+
+          &:hover path {
+            stroke: var(--color-white);
+          }
+
+          &:hover figure {
+            transform: scale(1.15);
+          }
+        }
+      }
+      &.cb {
+        & figure {
+          width: 100%;
+          height: 100%;
+          @include path.bg-img("common/fv-cb.png", cover);
+          background-position: 50% 42%;
+          transition: 1s;
+          position: absolute;
+        }
+
+        @include mq.has-hover {
+          &:hover .arrow::after {
+            background-color: var(--color-yellow);
+            transform: scale(1.3);
+          }
+
+          &:hover path {
+            stroke: var(--color-white);
+          }
+
+          &:hover figure {
+            transform: scale(1.15);
+          }
+        }
+      }
+    }
+  }
+}

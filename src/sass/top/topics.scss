@@ -1,0 +1,17 @@
+@use "sass:meta";
+@use "sass:math";
+@use "../_include/color";
+@use "../_include/decoration";
+@use "../_include/ease";
+@use "../_include/media_query" as mq;
+@use "../_include/path";
+@use "../_include/typography";
+@use "../_include/vw";
+@use "../_include/geom";
+
+section.topics {
+  margin-bottom: 100px;
+  @include mq.sm {
+    margin-bottom: 60px;
+  }
+}
