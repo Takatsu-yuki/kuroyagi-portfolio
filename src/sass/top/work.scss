@@ -15,6 +15,7 @@ section.work {
 
   @include mq.sm {
     margin-bottom: 60px;
+    padding-inline: 0;
   }
   .inner {
     --padding-inline: 120px;
@@ -26,25 +27,46 @@ section.work {
     align-items: center;
     justify-content: space-between;
     max-width: calc(1232px - var(--padding-inline) * 2);
+
+    @include mq.sm {
+      padding: 60px 25px;
+      border-radius: 40px;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
+
   .info {
     color: var(--color-white);
     display: flex;
     flex-direction: column;
     gap: 60px;
     width: 35%;
+
+    @include mq.sm {
+      width: 100%;
+      gap: 30px;
+    }
     .en {
       @include typography.en-regular;
-      font-size: min(vw.lg(110), 110px);
+      font-size: clamp(60px, vw.lg(110), 110px);
     }
     .ja {
       @include typography.serif-bold;
       font-size: 20px;
+
+      @include mq.sm {
+        font-size: 18px;
+      }
     }
     p {
       @include typography.serif-bold;
       font-size: 20px;
       line-height: 2;
+
+      @include mq.sm {
+        font-size: 16px;
+      }
     }
   }
 
@@ -53,6 +75,10 @@ section.work {
     width: 60%;
     flex-direction: column;
     gap: 20px;
+
+    @include mq.sm {
+      width: 100%;
+    }
     a {
       text-decoration: none;
       color: var(--color-white);
@@ -76,6 +102,10 @@ section.work {
         background-color: rgba($color: #000000, $alpha: 0.2);
         position: relative;
         z-index: 1;
+
+        @include mq.sm {
+          height: 134px;
+        }
 
         .arrow {
           --arrow-size: 70px;
