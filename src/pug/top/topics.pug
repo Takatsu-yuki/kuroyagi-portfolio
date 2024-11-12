@@ -1,0 +1,25 @@
+mixin columnItem(num)
+  li: a(href="#")
+    figure
+      img(src=`${pathToImgTop}topics_${num}.png`)
+    .inner
+      .meta
+        span.date
+          block date
+        span.category
+          block category
+      p
+        block content
+
+section.topics
+  h2
+    .en TOPICS
+    .ja お知らせ
+  ul
+    +columnItem('1')
+      block date
+      | 2024.XX.XX
+      block category
+      | カテゴリー
+      block content
+      | ここに見出しの文章が入ります。
