@@ -9,6 +9,7 @@ $-font-en: "Mohave", serif;
 @mixin serif-medium() {
   font-weight: 500;
   font-family: $-font-ja;
+  letter-spacing: 0.1rem;
 }
 
 @mixin serif-bold() {

@@ -14,7 +14,7 @@ section.work {
   padding-inline: 100px;
 
   @include mq.sm {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     padding-inline: 0;
   }
   .inner {
@@ -52,7 +52,7 @@ section.work {
       font-size: clamp(60px, vw.lg(110), 110px);
     }
     .ja {
-      @include typography.serif-bold;
+      @include typography.serif-medium;
       font-size: 20px;
 
       @include mq.sm {
@@ -152,7 +152,7 @@ section.work {
         }
 
         .ja {
-          @include typography.serif-bold;
+          @include typography.serif-medium;
         }
       }
 
