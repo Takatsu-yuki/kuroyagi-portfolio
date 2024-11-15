@@ -1,0 +1,87 @@
+@use "sass:meta";
+@use "sass:math";
+@use "../_include/color";
+@use "../_include/decoration";
+@use "../_include/ease";
+@use "../_include/media_query" as mq;
+@use "../_include/path";
+@use "../_include/typography";
+@use "../_include/vw";
+@use "../_include/geom";
+
+section.profile {
+  background-color: var(--color-gray);
+  border-radius: 100px 100px 0 0;
+  padding: 100px 100px 0 100px;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      @include decoration.dummy-image-border;
+      width: 30%;
+      height: 30%;
+      aspect-ratio: 1;
+      border-radius: vw.lg(50);
+      position: sticky;
+      top: 40px;
+    }
+
+    .main {
+      width: 56%;
+      display: flex;
+      gap: 30px;
+      color: var(--color-black);
+
+      h2 {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        gap: 15px;
+
+        .ja {
+          writing-mode: vertical-lr;
+        }
+        .en {
+          transform-origin: left bottom;
+          transform: translateY(-100%) rotate(90deg);
+          @include typography.en-regular;
+          font-size: 96px;
+          width: 96px;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .name {
+          @include typography.serif-bold;
+          font-size: 20px;
+          letter-spacing: 0;
+
+          figure {
+            @include path.bg-img("top/name.svg");
+            width: 144px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sign-off {
+  text-align: center;
+  @include typography.en-regular;
+  color: #efefef;
+  font-size: vw.lg(140);
+  background-color: var(--color-gray);
+  vertical-align: 1;
+  white-space: nowrap;
+  line-height: 1;
+  margin-bottom: -10px;
+}

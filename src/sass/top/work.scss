@@ -14,7 +14,7 @@ section.work {
   padding-inline: 100px;
 
   @include mq.sm {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     padding-inline: 0;
   }
   .inner {
@@ -160,7 +160,7 @@ section.work {
         & figure {
           width: 100%;
           height: 100%;
-          @include path.bg-img("common/fv-tcg.png", cover);
+          @include path.bg-img("top/fv-tcg.png", cover);
           background-position: 50% 32%;
           transition: 1s;
           position: absolute;
@@ -185,7 +185,7 @@ section.work {
         & figure {
           width: 100%;
           height: 100%;
-          @include path.bg-img("common/fv-cb.png", cover);
+          @include path.bg-img("top/fv-cb.png", cover);
           background-position: 50% 42%;
           transition: 1s;
           position: absolute;
