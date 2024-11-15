@@ -12,6 +12,14 @@ $-font-en: "Mohave", serif;
   letter-spacing: 0.1rem;
 }
 
+@mixin serif-main() {
+  font-weight: 500;
+  font-family: $-font-ja;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
 @mixin serif-bold() {
   font-weight: 700;
   font-family: $-font-ja;

@@ -12,11 +12,21 @@
 section.profile {
   background-color: var(--color-gray);
   border-radius: 100px 100px 0 0;
-  padding: 100px 100px 0 100px;
+  padding: 100px 100px 90 100px;
+
+  @include mq.sm {
+    padding: 40px 25px;
+    border-radius: vw.sm(40);
+  }
 
   .inner {
     display: flex;
     justify-content: space-between;
+
+    @include mq.sm {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     .icon {
       @include decoration.dummy-image-border;
@@ -26,6 +36,13 @@ section.profile {
       border-radius: vw.lg(50);
       position: sticky;
       top: 40px;
+
+      @include mq.sm {
+        height: 80%;
+        width: 60%;
+        position: static;
+        margin: 0 auto;
+      }
     }
 
     .main {
@@ -33,6 +50,9 @@ section.profile {
       display: flex;
       gap: 30px;
       color: var(--color-black);
+      @include mq.sm {
+        display: contents;
+      }
 
       h2 {
         display: flex;
@@ -41,8 +61,19 @@ section.profile {
         flex-direction: row-reverse;
         gap: 15px;
 
+        @include mq.sm {
+          order: -1;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+
         .ja {
           writing-mode: vertical-lr;
+
+          @include mq.sm {
+            writing-mode: horizontal-tb;
+          }
         }
         .en {
           transform-origin: left bottom;
@@ -50,6 +81,12 @@ section.profile {
           @include typography.en-regular;
           font-size: 96px;
           width: 96px;
+
+          @include mq.sm {
+            width: auto;
+            transform: translateY(0) rotate(0);
+            font-size: 60px;
+          }
         }
       }
 
@@ -58,15 +95,105 @@ section.profile {
         flex-direction: column;
         gap: 40px;
 
-        .name {
+        .head {
           @include typography.serif-bold;
           font-size: 20px;
           letter-spacing: 0;
 
+          .name {
+            display: flex;
+            gap: 50px;
+            margin-top: 15px;
+            figure {
+              @include path.bg-img("top/name.svg");
+              width: 144px;
+              height: 45px;
+            }
+            .sns {
+              display: flex;
+              align-items: center;
+              gap: 25px;
+
+              @include mq.sm {
+                gap: 15px;
+              }
+
+              a {
+                width: 32px;
+              }
+
+              .x {
+                @include path.bg-img("common/x.svg");
+                aspect-ratio: 32 / 30;
+              }
+
+              .instagram {
+                @include path.bg-img("common/instagram.svg");
+                aspect-ratio: 1 / 1;
+              }
+            }
+          }
+        }
+        .desc {
+          @include typography.serif-main;
+        }
+        .button {
+          @include typography.serif-bold;
+          box-sizing: border-box;
+          display: flex;
+          gap: 20px;
+          width: 100%;
+          max-width: 411px;
+          padding: 20px 25px 20px 30px;
+          border-radius: 100px;
+          border: solid 2px var(--color-black);
+          text-decoration: none;
+          align-items: center;
+          color: var(--color-black);
+          word-break: keep-all;
+          line-height: 1.7;
+
+          p {
+            display: inline-block;
+          }
+
           figure {
-            @include path.bg-img("top/name.svg");
-            width: 144px;
-            height: 45px;
+            @include path.bg-img("top/file.svg");
+            height: 30px;
+            width: 30px;
+          }
+        }
+
+        dl {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          dt {
+            @include typography.serif-bold;
+            font-size: 25px;
+            padding-bottom: 15px;
+            border-bottom: solid 2px var(--color-black);
+          }
+
+          dd {
+            @include typography.serif-main;
+            margin-bottom: 20px;
+          }
+
+          .result {
+            h4 {
+              @include typography.serif-bold;
+            }
+            ul {
+              margin: 10px 0 30px 0;
+              li {
+                list-style: disc;
+                list-style-position: inside;
+                margin-left: 1.4em;
+                text-indent: -1.4em;
+              }
+            }
           }
         }
       }
