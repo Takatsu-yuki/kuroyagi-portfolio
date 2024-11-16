@@ -15,8 +15,8 @@ section.profile {
   padding: 100px 100px 90 100px;
 
   @include mq.sm {
-    padding: 40px 25px;
-    border-radius: vw.sm(40);
+    padding: vw.sm(40) vw.sm(25);
+    border-radius: vw.sm(40) vw.sm(40) 0 0;
   }
 
   .inner {
@@ -25,14 +25,14 @@ section.profile {
 
     @include mq.sm {
       flex-direction: column;
-      gap: 30px;
+      gap: vw.sm(30);
     }
 
     .icon {
       @include decoration.dummy-image-border;
       width: 30%;
       height: 30%;
-      aspect-ratio: 1;
+      aspect-ratio: 1 / 1;
       border-radius: vw.lg(50);
       position: sticky;
       top: 40px;
@@ -66,13 +66,17 @@ section.profile {
           width: 100%;
           flex-direction: column;
           align-items: center;
+          gap: vw.sm(15);
         }
 
         .ja {
+          @include typography.serif-bold;
           writing-mode: vertical-lr;
+          font-size: 18px;
 
           @include mq.sm {
             writing-mode: horizontal-tb;
+            font-size: vw.sm(18);
           }
         }
         .en {
@@ -85,7 +89,7 @@ section.profile {
           @include mq.sm {
             width: auto;
             transform: translateY(0) rotate(0);
-            font-size: 60px;
+            font-size: vw.sm(60);
           }
         }
       }
@@ -99,6 +103,10 @@ section.profile {
           @include typography.serif-bold;
           font-size: 20px;
           letter-spacing: 0;
+
+          @include mq.sm {
+            font-size: vw.sm(20);
+          }
 
           .name {
             display: flex;
