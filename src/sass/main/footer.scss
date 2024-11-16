@@ -1,0 +1,125 @@
+@use "sass:meta";
+@use "sass:math";
+@use "../_include/color";
+@use "../_include/decoration";
+@use "../_include/ease";
+@use "../_include/media_query" as mq;
+@use "../_include/path";
+@use "../_include/typography";
+@use "../_include/vw";
+@use "../_include/geom";
+
+.global-footer {
+  background-color: var(--color-black);
+  padding: 80px 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+
+  .page-top-link {
+    height: 81px;
+    width: 81px;
+    border: solid 2px var(--color-white);
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    border-radius: 100px;
+
+    .arrow {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-content: center;
+
+      svg {
+        transform-origin: center;
+        transform: rotate(-90deg);
+
+        path {
+          stroke: var(--color-white);
+        }
+        place-content: center;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    path {
+      fill: var(--color-white);
+    }
+
+    p {
+      @include typography.serif-regular;
+      color: var(--color-white);
+    }
+  }
+  nav {
+    @include typography.serif-bold;
+
+    ul {
+      display: flex;
+      gap: vw.lg(130);
+
+      li {
+        a {
+          color: var(--color-white);
+          text-decoration: none;
+          display: block;
+        }
+
+        .en {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+
+        .ja {
+          font-size: 16px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+  .sns {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @include mq.sm {
+      gap: vw.sm(20);
+    }
+
+    a {
+      display: block;
+      path {
+        fill: var(--color-white);
+      }
+      @include mq.lg {
+        width: 32px;
+      }
+
+      @include mq.sm {
+        width: vw.sm(25);
+      }
+    }
+
+    .x {
+      width: 32px;
+      aspect-ratio: 32 / 30;
+    }
+
+    .instagram {
+      width: 30px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .copyright {
+    color: var(--color-white);
+    @include typography.serif-regular;
+    font-weight: 300;
+  }
+}
