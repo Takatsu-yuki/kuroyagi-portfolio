@@ -1,0 +1,53 @@
+extends _template/_base
+
+block vars
+  - lev1ID = "top";
+
+  block links
+    link(href=`${pathToCSS}work_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  section.work
+    .top
+      .head
+        h3 WORK
+        h2
+          | GAME
+          span &amp;
+          | TCG
+        p モンスターデザインやリッチなエフェクトで、かっこいいテイストのイラスト
+      img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
+    nav.work-nav
+      .category
+        a(href="#") 児童書向け
+        a(href="#") ゲーム・TCG向け
+      ul.tug
+        li 全て
+        //- li クライアントワーク
+        //- li ファンアート
+        //- li オリジナル
+    //- ul.work-list
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
+    //-   li
+    //-     a(href="")
+    //-       figure
+    //-         img(src="", alt="")
