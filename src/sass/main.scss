@@ -9,5 +9,6 @@
 @use "_include/vw";
 @use "_include/geom";
 
+@include mq.make-switching-class;
 @include meta.load-css("main/variables.scss");
 @include meta.load-css("main/header.scss");

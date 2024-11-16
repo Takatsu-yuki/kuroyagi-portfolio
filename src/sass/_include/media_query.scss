@@ -29,9 +29,9 @@ $-responsive-threshold1: 960px;
     @include no-sm;
   }
 
-  .no-md {
-    @include no-md;
-  }
+  // .no-md {
+  //   @include no-md;
+  // }
 
   .no-lg {
     @include no-lg;
@@ -39,18 +39,18 @@ $-responsive-threshold1: 960px;
 
   .sm-only {
     @include no-lg;
-    @include no-md;
+    // @include no-md;
   }
 
   .lg-only {
     @include no-sm;
-    @include no-md;
+    // @include no-md;
   }
 
-  .md-only {
-    @include no-sm;
-    @include no-lg;
-  }
+  // .md-only {
+  //   @include no-sm;
+  //   @include no-lg;
+  // }
 }
 
 @mixin has-hover {
