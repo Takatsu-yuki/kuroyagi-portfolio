@@ -10,7 +10,6 @@
 @use "../_include/geom";
 
 .global-header {
-  --height-sm: 70px;
   background-color: var(--color-white);
   width: 100%;
 
@@ -19,7 +18,7 @@
   }
 
   @include mq.sm {
-    height: var(--height-sm);
+    height: vw.sm(66);
   }
 
   .bar {
@@ -29,12 +28,16 @@
     height: 100%;
     padding-inline: 34px;
 
+    @include mq.sm {
+      padding-inline: vw.sm(20);
+    }
+
     .main {
       display: flex;
       gap: 30px;
       align-items: center;
       @include mq.sm {
-        gap: 15px;
+        gap: vw.sm(44);
       }
 
       .logo {
@@ -46,7 +49,7 @@
         }
 
         @include mq.sm {
-          height: 15px;
+          height: vw.sm(15);
         }
       }
 
@@ -56,7 +59,7 @@
         gap: 25px;
 
         @include mq.sm {
-          gap: 15px;
+          gap: vw.sm(20);
         }
 
         a {
@@ -65,7 +68,7 @@
           }
 
           @include mq.sm {
-            width: 25px;
+            width: vw.sm(25);
           }
         }
 
@@ -89,11 +92,16 @@
       display: flex;
       align-items: center;
       width: 35px;
+      aspect-ratio: 35 / 25;
       height: var(--button-height);
       z-index: 2;
 
       @include mq.sm {
-        width: 20px;
+        width: vw.sm(28);
+        right: vw.sm(20);
+        height: vw.sm(20);
+        z-index: 2;
+        aspect-ratio: 28 / 20;
       }
       span {
         position: absolute;
@@ -105,12 +113,22 @@
         height: 3px;
         background-color: var(--color-black);
         border-radius: 3px;
+        @include mq.sm {
+          height: 2px;
+        }
 
         &:first-of-type {
           transform: translateY(-11px) translateY(-50%);
+
+          @include mq.sm {
+            transform: translateY(vw.sm(-9)) translateY(-50%);
+          }
         }
         &:last-of-type {
           transform: translateY(11px) translateY(-50%);
+          @include mq.sm {
+            transform: translateY(vw.sm(9)) translateY(-50%);
+          }
         }
       }
 

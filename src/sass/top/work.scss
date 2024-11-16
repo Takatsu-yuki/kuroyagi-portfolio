@@ -13,7 +13,7 @@ section.work {
   margin-bottom: 100px;
   padding-inline: 100px;
 
-  @include mq.sm {
+  @include mq.md-sm {
     margin-bottom: 70px;
     padding-inline: 0;
   }
@@ -28,7 +28,7 @@ section.work {
     justify-content: space-between;
     max-width: calc(1232px - var(--padding-inline) * 2);
 
-    @include mq.sm {
+    @include mq.md-sm {
       padding: 60px 25px;
       border-radius: 40px;
       flex-direction: column;
@@ -43,7 +43,7 @@ section.work {
     gap: 60px;
     width: 35%;
 
-    @include mq.sm {
+    @include mq.md-sm {
       width: 100%;
       gap: 30px;
     }
@@ -55,7 +55,7 @@ section.work {
       @include typography.serif-medium;
       font-size: 20px;
 
-      @include mq.sm {
+      @include mq.md-sm {
         font-size: 18px;
       }
     }
@@ -64,7 +64,7 @@ section.work {
       font-size: 20px;
       line-height: 2;
 
-      @include mq.sm {
+      @include mq.md-sm {
         font-size: 16px;
       }
     }
@@ -76,7 +76,7 @@ section.work {
     flex-direction: column;
     gap: 20px;
 
-    @include mq.sm {
+    @include mq.md-sm {
       width: 100%;
     }
     a {
@@ -85,7 +85,7 @@ section.work {
       position: relative;
       overflow: hidden;
 
-      @include mq.sm {
+      @include mq.md-sm {
         height: 50%;
         width: 100%;
       }
@@ -103,7 +103,7 @@ section.work {
         position: relative;
         z-index: 1;
 
-        @include mq.sm {
+        @include mq.md-sm {
           height: 134px;
         }
 
@@ -125,7 +125,7 @@ section.work {
             z-index: -1;
             transition: 0.3s;
           }
-          @include mq.sm {
+          @include mq.md-sm {
             --arrow-size: 54px;
           }
         }
@@ -139,13 +139,13 @@ section.work {
           font-size: 60px;
           word-break: keep-all;
 
-          @include mq.sm {
+          @include mq.md-sm {
             font-size: 40px;
           }
 
           span {
             font-size: 51px;
-            @include mq.sm {
+            @include mq.md-sm {
               font-size: 34px;
             }
           }

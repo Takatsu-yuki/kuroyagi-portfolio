@@ -1,13 +1,20 @@
 $-responsive-threshold1: 960px;
+$-responsive-threshold2: 768px;
 
 @mixin lg {
-  @media screen and (min-width: #{$-responsive-threshold1 + 1}) {
+  @media screen and (min-width: #{$-responsive-threshold2 + 1}) {
+    @content;
+  }
+}
+
+@mixin md-sm {
+  @media screen and (max-width: #{$-responsive-threshold1}) {
     @content;
   }
 }
 
 @mixin sm {
-  @media screen and (max-width: #{$-responsive-threshold1}) {
+  @media screen and (max-width: #{$-responsive-threshold2}) {
     @content;
   }
 }
