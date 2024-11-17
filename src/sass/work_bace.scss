@@ -8,3 +8,47 @@
 @use "_include/typography";
 @use "_include/vw";
 @use "_include/geom";
+
+.work {
+  padding: 84px 50px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 240px;
+    .head {
+      h3 {
+        @include typography.en-bold;
+        color: var(--color-black);
+        font-size: 50px;
+      }
+
+      h2 {
+        @include typography.en-regular;
+        color: var(--color-blue);
+        font-size: 130px;
+        margin-top: 15px;
+        margin-left: -8px;
+
+        span {
+          font-size: 110px;
+        }
+      }
+
+      p {
+        @include typography.serif-main-lg;
+        color: var(--color-blue);
+
+        @include mq.sm {
+          @include typography.serif-main-sm;
+        }
+      }
+    }
+
+    img {
+      aspect-ratio: 534 / 407;
+      width: 534px;
+    }
+  }
+}

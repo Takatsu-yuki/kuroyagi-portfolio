@@ -43,7 +43,7 @@ $-font-en: "Mohave", serif;
   letter-spacing: 0.1rem;
 }
 
-@mixin en-midium() {
-  font-weight: 600;
+@mixin en-bold() {
+  font-weight: 700;
   font-family: $-font-en;
 }
