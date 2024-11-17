@@ -164,6 +164,7 @@ section.work {
           background-position: 50% 32%;
           transition: 1s;
           position: absolute;
+          transition-timing-function: ease.$custom1;
         }
 
         @include mq.has-hover {
@@ -189,6 +190,7 @@ section.work {
           background-position: 50% 42%;
           transition: 1s;
           position: absolute;
+          transition-timing-function: ease.$custom1;
         }
 
         @include mq.has-hover {

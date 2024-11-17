@@ -101,6 +101,7 @@ section.fv {
         @include path.bg-img("top/fv-tcg.png", cover);
         background-position: center;
         transition: 1s;
+        transition-timing-function: ease.$custom1;
       }
 
       @include mq.has-hover {
@@ -125,6 +126,7 @@ section.fv {
         @include path.bg-img("top/fv-cb.png", cover);
         background-position: center;
         transition: 1s;
+        transition-timing-function: ease.$custom1;
       }
 
       @include mq.has-hover {
