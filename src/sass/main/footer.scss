@@ -20,7 +20,7 @@
 
   @include mq.sm {
     padding: vw.sm(60) vw.sm(25);
-    gap: vw.sm(25);
+    gap: vw.sm(30);
   }
 
   .page-top-link {
@@ -35,6 +35,9 @@
     @include mq.sm {
       height: vw.sm(60);
       width: vw.sm(60);
+      top: auto;
+      bottom: vw.sm(60);
+      right: vw.sm(25);
     }
 
     .arrow {
@@ -47,10 +50,14 @@
         transform-origin: center;
         transform: rotate(-90deg);
 
+        @include mq.sm {
+          width: vw.sm(22);
+          height: vw.sm(15);
+        }
+
         path {
           stroke: var(--color-white);
         }
-        place-content: center;
       }
     }
   }
@@ -59,6 +66,21 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include mq.sm {
+      gap: vw.sm(10);
+      align-items: center;
+      width: 100%;
+    }
+
+    svg {
+      aspect-ratio: 410 / 31;
+
+      @include mq.sm {
+        width: vw.sm(260);
+      }
+    }
+
     path {
       fill: var(--color-white);
     }
@@ -66,6 +88,11 @@
     p {
       @include typography.serif-regular;
       color: var(--color-white);
+      font-size: 20px;
+
+      @include mq.sm {
+        font-size: vw.sm(16);
+      }
     }
   }
   nav {
@@ -76,21 +103,43 @@
       flex-wrap: wrap;
       gap: vw.lg(130);
 
+      @include mq.sm {
+        flex-direction: column;
+        gap: vw.sm(25);
+        margin-top: vw.sm(60);
+      }
+
       li {
         a {
           color: var(--color-white);
           text-decoration: none;
           display: block;
+
+          &:nth-of-type(2) {
+            margin-top: 20px;
+
+            @include mq.sm {
+              margin-top: vw.sm(5);
+            }
+          }
         }
 
         .en {
           font-size: 36px;
-          margin-bottom: 20px;
+
+          @include mq.sm {
+            font-size: vw.sm(22);
+          }
         }
 
         .ja {
           font-size: 16px;
           line-height: 2;
+
+          @include mq.sm {
+            font-size: vw.sm(16);
+            font-weight: 500;
+          }
         }
       }
     }
@@ -102,6 +151,7 @@
 
     @include mq.sm {
       gap: vw.sm(20);
+      margin-top: vw.sm(60);
     }
 
     a {
@@ -116,15 +166,17 @@
       @include mq.sm {
         width: vw.sm(25);
       }
+
+      svg {
+        width: 100%;
+      }
     }
 
     .x {
-      width: 32px;
       aspect-ratio: 32 / 30;
     }
 
     .instagram {
-      width: 30px;
       aspect-ratio: 1 / 1;
     }
   }
@@ -132,5 +184,9 @@
     color: var(--color-white);
     @include typography.serif-regular;
     font-weight: 300;
+
+    @include mq.sm {
+      font-size: vw.sm(12);
+    }
   }
 }
