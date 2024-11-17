@@ -94,13 +94,12 @@
       width: 35px;
       aspect-ratio: 35 / 25;
       height: var(--button-height);
-      z-index: 2;
+      z-index: 3;
 
       @include mq.sm {
         width: vw.sm(28);
         right: vw.sm(20);
         height: vw.sm(20);
-        z-index: 2;
         aspect-ratio: 28 / 20;
       }
       span {
@@ -150,6 +149,7 @@
     }
   }
   nav {
+    box-sizing: border-box;
     background-color: var(--color-black);
     height: 100vh;
     padding: 0 95px;
@@ -159,19 +159,40 @@
     position: fixed;
     top: 0;
     right: 0;
-    display: none;
+    // display: none;
     z-index: 2;
+    transform: translateX(100%);
+
+    &.open {
+      transform: translateX(0%);
+    }
+
+    @include mq.sm {
+      width: 100%;
+      padding: vw.sm(80) vw.sm(56);
+      align-items: normal;
+    }
 
     .inner {
       display: flex;
       align-items: flex-end;
       gap: 40px;
+
+      @include mq.sm {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
     }
 
     ul {
       display: flex;
       flex-direction: column;
       gap: 45px;
+
+      @include mq.sm {
+        gap: vw.sm(25);
+      }
 
       li {
         display: flex;
@@ -183,6 +204,10 @@
           @include typography.serif-regular;
           letter-spacing: 0.1rem;
           font-size: 36px;
+
+          @include mq.sm {
+            font-size: vw.sm(22);
+          }
         }
 
         .ja {
@@ -193,6 +218,10 @@
 
           a {
             font-size: 16px;
+
+            @include mq.sm {
+              font-size: vw.sm(16);
+            }
           }
         }
       }
@@ -204,17 +233,22 @@
       gap: 25px;
 
       @include mq.sm {
-        gap: 15px;
+        gap: vw.sm(18);
       }
 
       a {
-        @include mq.lg {
-          width: 32px;
-        }
+        width: 32px;
+        height: 32px;
 
         @include mq.sm {
-          width: 25px;
+          height: vw.sm(32);
+          width: vw.sm(32);
         }
+      }
+
+      svg {
+        height: 100%;
+        width: 100%;
       }
       path {
         fill: var(--color-white);
