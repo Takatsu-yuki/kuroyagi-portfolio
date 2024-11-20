@@ -1,17 +1,10 @@
-extends _template/_base
+extends _template/_base2
 
 block vars
   - lev1ID = "top";
-  - lev = 1;
 
   block links
-    link(href=`${pathToCSS}work_bace.css${hash}`, rel="stylesheet", type="text/css")
-
-mixin muuriItem(num, tag, alt)
-  li(class=item, `&{tag}`)
-    .item-content
-      a(href="#")
-        img(src=`${pathToImgTCG}${num}.png`, alt=`${alt}`)
+    link(href=`../${pathToCSS}work_bace.css${hash}`, rel="stylesheet", type="text/css")
 
 block main
   section.work
@@ -30,16 +23,31 @@ block main
         a(href="#") ゲーム・TCG向け
       ul.tug
         li 全て
-        li お仕事
+        //- li クライアントワーク
         //- li ファンアート
-        li オリジナル
-    ul.grid
-      +muuriItem(1, "category-a", "TCG風イラスト")
-      +muuriItem(2, "category-b", "TCG風イラスト")
-      +muuriItem(3, "category-c", "カレンダーコンテスト5月")
-
-block scripts
-  //- muuriインストール
-  script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"
-  //- アニメーションインストール
-  script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"
+        //- li オリジナル
+    ul.work-list
+      li
+        a(href="")
+          figure
+            img(src="", alt="")
+      li
+        a(href="")
+          figure
+            img(src="", alt="")
+      li
+        a(href="")
+          figure
+            img(src="", alt="")
+      li
+        a(href="")
+          figure
+            img(src="", alt="")
+      li
+        a(href="")
+          figure
+            img(src="", alt="")
+      li
+        a(href="")
+          figure
+            img(src="", alt="")

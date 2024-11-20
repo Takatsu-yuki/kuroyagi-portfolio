@@ -22,8 +22,8 @@ block vars
   var pathToCSS = pathToAssets + 'css/';
   var pathToLibs = pathToAssets + 'libs/';
   var pathToSVG = pathToAssets + 'images/svg/';
-  var pathToImgCB = pathToAssets + 'images/work/cb/';
-  var pathToImgTCG = pathToAssets + 'images/work/tcg/';
+  var pathToImgLG = pathToAssets + 'images/lg/';
+  var pathToImgMD = pathToAssets + 'images/md/';
   var pathToImgSM = pathToAssets + 'images/sm/';
 
 doctype html
@@ -52,5 +52,7 @@ html(lang="ja", xmlns:og="http://ogp.me/ns#")
     include ../_include/header.pug
     main
       block main
-    include ../_include/footer.pug
     block scripts
+
+    include ../_include/footer.pug
+    script(src="assets/js/main.js") 
