@@ -32,13 +32,13 @@ export default makeConfig({
       "work_bace.css": "work_bace.scss",
     },
   },
-  ts: {
-    src: join(DIR_SRC, "ts"),
-    dest: join(DIR_ASSETS, "js"),
-    files: {
-      "main.js": "main.ts",
-    },
-  },
+  // ts: {
+  //   src: join(DIR_SRC, "ts"),
+  //   dest: join(DIR_ASSETS, "js"),
+  //   files: {
+  //     "main.js": "main.ts",
+  //   },
+  // },
   copy: [
     {
       from: join(DIR_SRC, "assets/libs"),
