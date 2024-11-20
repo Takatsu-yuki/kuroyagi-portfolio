@@ -1,4 +1,5 @@
-// 'use strict';
+// TypeScriptでMuuriを無視するための宣言
+// declare var Muuri: any;
 
 // //navigation
 // const navigation = document.querySelector('.navigation');
@@ -18,3 +19,6 @@
 // }
 
 // console.log(humbergarBtn);
+
+// var grid = new Muuri(".grid");
+console.log("hello world!");
