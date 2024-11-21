@@ -29,7 +29,7 @@ section.profile {
     }
 
     .icon {
-      @include path.bg-img("top/profile-img.jpg");
+      @include path.bg-img("top/profile-icon.jpg");
       width: 30%;
       height: 30%;
       aspect-ratio: 1 / 1;

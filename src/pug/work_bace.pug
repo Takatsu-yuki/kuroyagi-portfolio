@@ -2,13 +2,16 @@ extends _template/_base
 
 block vars
   - lev1ID = "top";
-    - lev = 1;
+  - lev = 1;
+  - itleChild = "WORK";
 
   block links
     link(href=`${pathToCSS}work_bace.css${hash}`, rel="stylesheet", type="text/css")
+    //- muuriのソートボタンのスタイルリセット？
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
 
-mixin muuriItem(num, tag, alt)
-  li(class=item, `&{tag}`)
+mixin muuriItem(num, sort, alt)
+  li(class=`item ${sort}`)
     .item-content
       a(href="#")
         img(src=`${pathToImgTCG}${num}.png`, alt=`${alt}`)
@@ -24,24 +27,28 @@ block main
           | TCG
         p モンスターデザインやリッチなエフェクトで、かっこいいテイストのイラスト
       img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
-    nav.work-nav
-      .category
-        a(href="#") 児童書向け
-        a(href="#") ゲーム・TCG向け
-      ul.tug
-        li 全て
-        li お仕事
-        //- li ファンアート
-        li オリジナル
+    .discography
+      nav.menu-box
+        .category
+          a(href="#") 児童書向け
+          a(href="#") ゲーム・TCG向け
+        ul.sort-btn
+          li.sort00.active
+            button 全て
+          li.sort01
+            button お仕事
+          li.sort02
+            button オリジナル
+          //- li ファンアート
     ul.grid
-      +muuriItem(1, "category-a", "TCG風イラスト")
-      +muuriItem(2, "category-b", "TCG風イラスト")
-      +muuriItem(3, "category-c", "カレンダーコンテスト5月")
+      +muuriItem(1, "sort02", "TCG風イラスト")
+      +muuriItem(2, "sort02", "TCG風イラスト")
+      +muuriItem(3, ".sort01", "カレンダーコンテスト5月")
 
 block scripts
   //- muuriインストール
   script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"
   //- アニメーションインストール
   script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"
-  script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" 
+  script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"
   script src=`${pathToLibs}main.js`

@@ -48,5 +48,9 @@ export default makeConfig({
       from: join(DIR_SRC, "assets/img"),
       to: join(DIR_ASSETS, "images"),
     },
+    {
+      from: join(DIR_SRC, "assets/js"),
+      to: join(DIR_ASSETS, "js"),
+    },
   ],
 });
