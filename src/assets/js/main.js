@@ -1,11 +1,17 @@
 "use strict";
-
-console.log("hello world!");
-console.log(typeof Muuri);
 // muuri
 document.addEventListener("DOMContentLoaded", function () {
-  const grid = new Muuri(".grid");
+  var grid = new Muuri(".grid");
+
+  document.querySelectorAll(".filter-btns button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter; // ボタンのdata-filter属性からフィルタを取得
+      grid.filter(filter === "*" ? () => true : `[data-tag="${filter}"]`); // data-tag属性でフィルタリング
+      console.log(filter); // 正しくフィルタ名が表示される
+    });
+  });
 });
+
 // //navigation
 // const navigation = document.querySelector('.navigation');
 // const humbergarBtn = document.getElementById('humbergar-btn');

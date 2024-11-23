@@ -10,13 +10,19 @@
 @use "_include/geom";
 
 .work-bace {
-  padding: 84px 50px;
+  padding: 84px 20px;
+  max-width: 1240px;
+  margin: 0 auto;
 
   .top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 240px;
+
+    @include mq.md-sm {
+      flex-direction: column;
+    }
+
     .head {
       h3 {
         @include typography.en-bold;
@@ -30,6 +36,9 @@
         font-size: 130px;
         margin-top: 15px;
         margin-left: -8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
 
         span {
           font-size: 110px;
@@ -44,22 +53,82 @@
           @include typography.serif-main-sm;
         }
       }
+
+      .br {
+        display: none;
+        @media screen and (max-width: 1100px) {
+          display: block;
+        }
+      }
     }
 
     img {
       aspect-ratio: 534 / 407;
       width: 534px;
+
+      @include mq.md-sm {
+        width: 100%;
+        order: 0;
+        margin-top: 50px;
+      }
+    }
+
+    .pc-content {
+      @include mq.md-sm {
+        display: contents;
+      }
     }
   }
+  .menu-box {
+    margin-top: 80px;
+
+    .category {
+      display: flex;
+      gap: 30px;
+      @include typography.serif-bold;
+      a {
+        display: block;
+        box-sizing: border-box;
+        padding: 17px 30px;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 100px;
+        white-space: nowrap;
+
+        &:first-child {
+          border: solid var(--color-black) 2px;
+          color: var(--color-black);
+          padding: 17px 30px;
+        }
+
+        &:last-child {
+          background-color: var(--color-blue);
+          color: var(--color-white);
+          padding: 19px 32px;
+        }
+      }
+    }
+
+    .filter-btn {
+      display: flex;
+      gap: 40px;
+      color: var(--coloe-gray);
+    }
+
+    @include mq.md-sm {
+      order: 1;
+      margin-top: 50px;
+    }
+  }
+
   .grid {
     position: relative;
-    width: 100%;
   }
   .item {
     display: block;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 23.5%;
+    aspect-ratio: 1 / 1;
     margin: 5px;
     z-index: 1;
     background: #000;
