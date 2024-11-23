@@ -14,11 +14,11 @@
   width: 100%;
 
   @include mq.lg {
-    height: 90px;
+    height: 100px;
   }
 
   @include mq.sm {
-    height: vw.sm(66);
+    height: vw.sm(70);
   }
 
   .bar {
@@ -41,15 +41,32 @@
       }
 
       .logo {
-        @include path.bg-img("common/logo.svg");
-        aspect-ratio: 409 / 33;
+        color: var(--color-black);
+        text-decoration: none;
+        margin-top: 9px;
 
-        @include mq.lg {
-          height: 33px;
+        figure {
+          @include path.bg-img("common/logo.svg");
+          aspect-ratio: 350 / 29;
+
+          @include mq.lg {
+            height: 29px;
+          }
+
+          @include mq.sm {
+            height: vw.sm(15);
+          }
         }
+        span {
+          display: block;
+          @include typography.serif-bold;
+          font-size: 12px;
+          margin: 3px 0 0 2px;
 
-        @include mq.sm {
-          height: vw.sm(15);
+          @include mq.sm {
+            font-size: vw.sm(10);
+            margin: vw.sm(3) 0 0 vw.sm(2);
+          }
         }
       }
 
