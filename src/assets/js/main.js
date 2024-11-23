@@ -1,4 +1,5 @@
 "use strict";
+
 // muuri
 document.addEventListener("DOMContentLoaded", function () {
   var grid = new Muuri(".grid");
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter; // ボタンのdata-filter属性からフィルタを取得
       grid.filter(filter === "*" ? () => true : `[data-tag="${filter}"]`); // data-tag属性でフィルタリング
-      console.log(filter); // 正しくフィルタ名が表示される
+      // console.log(filter);
     });
   });
 });

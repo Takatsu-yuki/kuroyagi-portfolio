@@ -10,11 +10,9 @@
 @use "_include/geom";
 
 .work-bace {
-  padding: 84px 20px;
-  max-width: 1240px;
-  margin: 0 auto;
-
+  padding-top: 84px;
   .top {
+    @include decoration.padding-inline;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -109,10 +107,31 @@
       }
     }
 
-    .filter-btn {
+    .filter-btns {
       display: flex;
       gap: 40px;
-      color: var(--coloe-gray);
+      margin-top: 35px;
+
+      button {
+        color: var(--font-gray);
+        background-color: transparent;
+        border: none;
+        @include typography.serif-bold;
+        font-size: 20px;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--color-blue);
+        }
+
+        &.active {
+          color: var(--color-blue);
+
+          &::before {
+            content: "・";
+          }
+        }
+      }
     }
 
     @include mq.md-sm {
@@ -120,32 +139,43 @@
       margin-top: 50px;
     }
   }
-
-  .grid {
-    position: relative;
-  }
-  .item {
-    display: block;
-    position: absolute;
-    width: 23.5%;
-    aspect-ratio: 1 / 1;
-    margin: 5px;
-    z-index: 1;
-    background: #000;
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+  .hr {
+    @include decoration.padding-inline;
+    margin-top: 30px;
+    hr {
+      margin: 0;
+      background-color: var(--color-black);
     }
   }
-  .item-content {
+
+  .grid {
+    --item-margin: 17.5px;
+
     position: relative;
-    width: 100%;
-    height: 100%;
+    max-width: calc(1240px + var(--item-margin) * 2);
+    margin: 45px auto;
+    .item {
+      display: block;
+      position: absolute;
+      width: 23.5%;
+      aspect-ratio: 1 / 1;
+      margin: var(--item-margin);
+      z-index: 1;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .item-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
