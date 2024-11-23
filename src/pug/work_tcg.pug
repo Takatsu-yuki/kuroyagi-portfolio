@@ -10,8 +10,8 @@ block vars
 mixin muuriItem(num, tag, alt)
   li.item(data-tag=`${tag}`)
     .item-content
-      a(href=`/${num}/`)
-        img(src=`${pathToImgTCG}${num}.png`, alt=`${alt}`)
+      a(href=`/tcg/${num}/`)
+        img(src=`${pathToTcgMin}${num}.png`, alt=`${alt}`)
 
 block main
   section.work-bace
@@ -33,16 +33,16 @@ block main
             button(data-filter="filter01") お仕事
             button(data-filter="filter02") オリジナル
             //- button ファンアート
-      img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
+      img(src=`${pathToTcgMin}top.png`, alt="", width="200px")
     .hr
       hr
     ul.grid
-      +muuriItem(01, "filter02", "TCG風イラスト")
-      +muuriItem(02, "filter02", "TCG風イラスト")
-      +muuriItem(03, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(04, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(05, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(06, "filter01", "カレンダーコンテスト5月")
+      +muuriItem("01", "filter02", "TCG風イラスト")
+      +muuriItem("02", "filter02", "TCG風イラスト")
+      +muuriItem("03", "filter01", "カレンダーコンテスト5月")
+      +muuriItem("04", "filter01", "カレンダーコンテスト5月")
+      +muuriItem("05", "filter01", "カレンダーコンテスト5月")
+      +muuriItem("06", "filter01", "カレンダーコンテスト5月")
 
 block scripts
   //- アニメーションインストール

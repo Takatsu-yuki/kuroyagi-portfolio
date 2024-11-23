@@ -1,0 +1,66 @@
+@use "sass:meta";
+@use "sass:math";
+@use "_include/color";
+@use "_include/decoration";
+@use "_include/ease";
+@use "_include/media_query" as mq;
+@use "_include/path";
+@use "_include/typography";
+@use "_include/vw";
+@use "_include/geom";
+
+.detail {
+  padding: 0 100px;
+  .main {
+    max-width: 1040px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bg {
+      aspect-ratio: 1 / 1;
+      width: 67.3%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .info {
+      width: 25.9%;
+      color: var(--color-black);
+
+      span {
+        display: block;
+        color: var(--color-blue);
+        @include typography.serif-main-lg;
+      }
+
+      h3 {
+        color: var(--color-black);
+        @include typography.serif-bold;
+        font-size: 26px;
+        margin-top: 20px;
+      }
+
+      dl {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        @include typography.serif-main-lg;
+
+        dt {
+          width: 35%;
+        }
+        dd {
+          width: 65%;
+        }
+      }
+
+      p {
+        @include typography.serif-main-lg;
+      }
+    }
+  }
+}
