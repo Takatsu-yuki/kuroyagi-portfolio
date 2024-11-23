@@ -1,10 +1,9 @@
 mixin columnItem(num, date)
-  li: a(href="#")
+  li: a(href=`/topics/${num}/`)
     figure
       img(src=`${pathToTop}topics_${num}.png`)
     .inner
-      .meta
-        span.date #{ date }
+      span.date #{ date }
       block
 
 section#topics.topics
@@ -12,9 +11,9 @@ section#topics.topics
     .en TOPICS
     .ja お知らせ
   ul
-    +columnItem('1', '2024.11.29')
+    +columnItem('01', '2024.11.29')
       p 小学一年生2025年1月号（小学館）イラスト担当いたしました。
-    +columnItem('2', '2024.11.29')
+    +columnItem('02', '2024.11.29')
       p 小学一年生2025年1月号（小学館）イラスト担当いたしました。
-    +columnItem('3', '2024.11.29')
+    +columnItem('03', '2024.11.29')
       p 小学一年生2025年1月号（小学館）イラスト担当いたしました。
