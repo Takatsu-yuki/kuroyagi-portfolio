@@ -20,8 +20,9 @@ export default makeConfig({
     data: [],
     files: {
       "index.html": "top.pug",
-      "work/index.html": "work_bace.pug",
-      "work/tcg01/index.html": "tcg01.pug",
+      "tcg/index.html": "work_tcg.pug",
+      "cb/index.html": "work_cb.pug",
+      "tcg/detail/01.html": "tcg01.pug",
     },
   },
   sass: {
@@ -30,7 +31,9 @@ export default makeConfig({
     files: {
       "main.css": "main.scss",
       "top.css": "top.scss",
-      "work_bace.css": "work_bace.scss",
+      "work_tcg.css": "work_tcg.scss",
+      "work_cb.css": "work_cb.scss",
+      "detail_bace.css": "detail_bace.scss",
     },
   },
   // ts: {

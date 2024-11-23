@@ -1,0 +1,52 @@
+extends _template/_base
+
+block vars
+  - lev1ID = "top";
+  - lev = 1;
+  - titleChild = "WORK";
+
+  block links
+    link(href=`${pathToCSS}work_cb.css${hash}`, rel="stylesheet", type="text/css")
+mixin muuriItem(num, tag, alt)
+  li.item(data-tag=`${tag}`)
+    .item-content
+      a(href="#")
+        img(src=`${pathToImgTCG}${num}.png`, alt=`${alt}`)
+
+block main
+  section.work-bace
+    .top
+      .pc-content
+        .head
+          h3 WORK
+          h2
+            | GAME
+            span &amp;
+            | TCG
+          p モンスターデザインやリッチなエフェクトで、かっこいいテイストのイラスト
+        nav.menu-box
+          .category
+            a(href="#") 児童書向け
+            a(href="#") ゲーム・TCG向け
+          .filter-btns
+            button.active(data-filter="*") 全て
+            button(data-filter="filter01") お仕事
+            button(data-filter="filter02") オリジナル
+            //- button ファンアート
+      img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
+    .hr
+      hr
+    ul.grid
+      +muuriItem(1, "filter02", "TCG風イラスト")
+      +muuriItem(2, "filter02", "TCG風イラスト")
+      +muuriItem(3, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(4, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(5, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(6, "filter01", "カレンダーコンテスト5月")
+
+block scripts
+  //- アニメーションインストール
+  script(src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js")
+  //- muuriインストール
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.9.5/muuri.min.js")
+  script(src=`${pathToJS}main.js`)

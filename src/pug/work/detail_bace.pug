@@ -1,0 +1,13 @@
+mixin detail(tag, h3, date, span)
+  .main
+    figure 
+    .info
+      span ${tag}
+      h3 ${h3}
+      dl
+        dt 制作時期
+        dd ${date}
+        dt 制作期間
+        dd ${span}
+      p
+        block
