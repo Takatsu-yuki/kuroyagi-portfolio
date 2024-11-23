@@ -10,7 +10,7 @@ block vars
 mixin muuriItem(num, tag, alt)
   li.item(data-tag=`${tag}`)
     .item-content
-      a(href="#")
+      a(href=`/${num}/`)
         img(src=`${pathToImgTCG}${num}.png`, alt=`${alt}`)
 
 block main
@@ -37,12 +37,12 @@ block main
     .hr
       hr
     ul.grid
-      +muuriItem(1, "filter02", "TCG風イラスト")
-      +muuriItem(2, "filter02", "TCG風イラスト")
-      +muuriItem(3, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(4, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(5, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(6, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(01, "filter02", "TCG風イラスト")
+      +muuriItem(02, "filter02", "TCG風イラスト")
+      +muuriItem(03, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(04, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(05, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(06, "filter01", "カレンダーコンテスト5月")
 
 block scripts
   //- アニメーションインストール
