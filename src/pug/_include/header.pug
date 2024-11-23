@@ -1,11 +1,11 @@
 header#top.global-header
   .bar
     .main
-      figure.logo
+      a.logo(href="/")
       .sns
         a.x(href="https://x.com/kuroyagi_11", target="_blank", rel="noopener noreferrer")
         a.instagram(href="https://www.instagram.com/kuroyagi_11/", target="_blank", rel="noopener noreferrer")
-    .hamburger
+    #hambergar-btn.hamburger
       span 
       span 
       span 
@@ -13,18 +13,18 @@ header#top.global-header
     .inner
       ul
         li
-          a.en(href="#") TOP
+          a.en(href="/#top") TOP
         li
-          a.en(href="#") TOPICS
+          a.en(href="/#topics") TOPICS
         li
-          a.en(href="#") WORK
+          a.en(href="/#work") WORK
           .ja
-            a(href="#") ゲーム・TCG向け
-            a(href="#") 児童書向け
+            a(href="/tcg/") ゲーム・TCG向け
+            a(href="/cb/") 児童書向け
         li
-          a.en(href="#") CONTACT
+          a.en(href="/#contact") CONTACT
         li
-          a.en(href="#") PROFILE
+          a.en(href="/#profile") PROFILE
       .sns
         a.x(href="https://x.com/kuroyagi_11", target="_blank", rel="noopener noreferrer")
           include ../../assets/img/common/x.svg

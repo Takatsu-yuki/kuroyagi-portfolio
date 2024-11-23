@@ -112,6 +112,8 @@
         height: 3px;
         background-color: var(--color-black);
         border-radius: 3px;
+        transition: 0.3s ease.$custom1;
+
         @include mq.sm {
           height: 2px;
         }
@@ -162,6 +164,7 @@
     // display: none;
     z-index: 2;
     transform: translateX(100%);
+    transition: 0.3s ease.$custom1;
 
     &.open {
       transform: translateX(0%);

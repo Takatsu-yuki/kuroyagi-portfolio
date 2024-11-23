@@ -1,20 +1,19 @@
 "use strict";
 
-//navigation
-// const navigation = document.querySelector('.navigation');
-// const humbergarBtn = document.getElementById('humbergar-btn');
-// const navigationTitle = document.querySelectorAll('.navigation-title');
+navigation;
+const nav = document.querySelector("nav");
+const hambergarBtn = document.getElementById("hambergar-btn");
+const navTitle = document.querySelectorAll(".inner li");
 
-// humbergarBtn.addEventListener('click',function(){
-//   humbergarBtn.classList.toggle('open');
-//   navigation.classList.toggle('open')
-// });
+// console.log(hambergarBtn);
+hambergarBtn.addEventListener("click", () => {
+  hambergarBtn.classList.toggle("open");
+  nav.classList.toggle("open");
+});
 
-// for(let i = 0; i < navigationTitle.length; i ++ ){
-// navigationTitle[i].addEventListener('click',function(){
-//   humbergarBtn.classList.remove('open');
-//   navigation.classList.remove('open')
-// });
-// }
-
-// console.log(humbergarBtn);
+for (let i = 0; i < navTitle.length; i++) {
+  navTitle[i].addEventListener("click", () => {
+    hambergarBtn.classList.remove("open");
+    nav.classList.remove("open");
+  });
+}
