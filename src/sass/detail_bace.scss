@@ -10,9 +10,11 @@
 @use "_include/geom";
 
 .detail {
-  padding: 0 100px;
+  padding: 0 200px;
   .main {
+    box-sizing: border-box;
     max-width: 1040px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +68,7 @@
 
   .btns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     @include typography.serif-bold;
     font-size: 26px;

@@ -1,4 +1,4 @@
-mixin detail(num, tag, h3, date, span,total = 6)
+mixin detail(num, tag, h3, date, span,p,total = 6)
   section.detail
     .main
       .bg
@@ -11,18 +11,19 @@ mixin detail(num, tag, h3, date, span,total = 6)
           dd #{ date }
           dt 制作期間
           dd #{ span }
-        p
-          block
+        p #{ p }
+    block
+
     .btns
       - const prev = num === 1 ? total : num - 1;
       - const next = num === total ? 1 : num + 1;
 
-      a.btn(href=`/${prev}/`) 
+      a.btn(href=`/tcg/${prev}/`) 
         .arrow
           include ../../assets/img/common/arrow.svg
         span 前へ
       a.back(href="/tcg/") 作品一覧へ戻る
-      a.btn(href=`/${next}/`)
+      a.btn(href=`/tcg/${next}/`)
         span 次へ
         .arrow
           include ../../assets/img/common/arrow.svg
