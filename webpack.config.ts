@@ -22,9 +22,9 @@ export default makeConfig({
       "index.html": "top.pug",
       "tcg/index.html": "work_tcg.pug",
       "cb/index.html": "work_cb.pug",
-      "tcg/01/index.html": "tcg_01.pug",
-      "tcg/02/index.html": "tcg_02.pug",
-      "topics/01/index.html": "topics_01.pug",
+      "tcg/1/index.html": "tcg_1.pug",
+      "tcg/2/index.html": "tcg_2.pug",
+      "topics/1/index.html": "topics_1.pug",
     },
   },
   sass: {

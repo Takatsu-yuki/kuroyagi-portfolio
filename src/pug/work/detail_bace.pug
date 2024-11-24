@@ -1,9 +1,8 @@
-mixin detail(num,tag, h3, date, span)
+mixin detail(num, tag, h3, date, span,total = 6)
   section.detail
     .main
       .bg
         img(src=`${pathToTcgBig}${num}.png`)
-        //- img(src=`${pathToTcgBig}${num}.png`, style="background-size: contain; background-img: `${pathToTcgBig}${num}.png`")
       .info
         span #{ tag }
         h3 #{ h3 }
@@ -15,12 +14,15 @@ mixin detail(num,tag, h3, date, span)
         p
           block
     .btns
-      a.btn(href="#") 
+      - const prev = num === 1 ? total : num - 1;
+      - const next = num === total ? 1 : num + 1;
+
+      a.btn(href=`/${prev}/`) 
         .arrow
           include ../../assets/img/common/arrow.svg
         span 前へ
       a.back(href="/tcg/") 作品一覧へ戻る
-      a.btn(href="#")
+      a.btn(href=`/${next}/`)
         span 次へ
         .arrow
           include ../../assets/img/common/arrow.svg
