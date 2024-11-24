@@ -237,10 +237,10 @@
           margin-top: 20px;
 
           a {
-            font-size: 16px;
+            @include typography.serif-main-lg;
 
             @include mq.sm {
-              font-size: vw.sm(16);
+              font-size: vw.sm(14);
             }
           }
         }

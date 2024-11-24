@@ -36,13 +36,14 @@ block main
       img(src=`${pathToTcgMin}top.png`, alt="", width="200px")
     .hr
       hr
-    ul.grid
-      +muuriItem(1, "filter02", "TCG風イラスト")
-      +muuriItem(2, "filter02", "TCG風イラスト")
-      +muuriItem(3, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(4, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(5, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(6, "filter01", "カレンダーコンテスト5月")
+    .padding
+      ul.grid
+        +muuriItem(1, "filter02", "TCG風イラスト")
+        +muuriItem(2, "filter02", "TCG風イラスト")
+        +muuriItem(3, "filter01", "カレンダーコンテスト5月")
+        +muuriItem(4, "filter01", "カレンダーコンテスト5月")
+        +muuriItem(5, "filter01", "カレンダーコンテスト5月")
+        +muuriItem(6, "filter01", "カレンダーコンテスト5月")
 
 block scripts
   //- アニメーションインストール

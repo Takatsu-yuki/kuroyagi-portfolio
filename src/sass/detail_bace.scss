@@ -11,6 +11,14 @@
 
 .detail {
   padding: 0 200px;
+
+  @include mq.md-sm {
+    padding: 0 100px;
+  }
+
+  @include mq.sm {
+    padding: 0 vw.sm(20);
+  }
   .main {
     box-sizing: border-box;
     max-width: 1040px;
@@ -18,9 +26,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mq.md-sm {
+      flex-direction: column;
+      gap: vw.sm(40);
+    }
     .bg {
       aspect-ratio: 1 / 1;
-      width: 67.3%;
+      width: 70%;
+
+      @include mq.md-sm {
+        width: 100%;
+        aspect-ratio: auto;
+      }
 
       img {
         width: 100%;
@@ -32,10 +50,18 @@
       width: 25.9%;
       color: var(--color-black);
 
+      @include mq.md-sm {
+        width: 100%;
+      }
+
       span {
         display: block;
         color: var(--color-blue);
         @include typography.serif-main-lg;
+
+        @include mq.sm {
+          font-size: vw.sm(11);
+        }
       }
 
       h3 {
@@ -43,6 +69,11 @@
         @include typography.serif-bold;
         font-size: 26px;
         margin-top: 20px;
+
+        @include mq.sm {
+          font-size: vw.sm(20);
+          margin-top: vw.sm(5);
+        }
       }
 
       dl {
@@ -51,17 +82,35 @@
         flex-wrap: wrap;
         width: 100%;
         @include typography.serif-main-lg;
+        width: 270px;
+
+        @include mq.sm {
+          width: 100%;
+          margin-top: vw.sm(20);
+          @include typography.serif-main-sm;
+        }
 
         dt {
           width: 35%;
+
+          @include mq.sm {
+            width: 26%;
+          }
         }
         dd {
           width: 65%;
+
+          @include mq.sm {
+            width: 74%;
+          }
         }
       }
 
       p {
         @include typography.serif-main-lg;
+        @include mq.sm {
+          @include typography.serif-main-sm;
+        }
       }
     }
   }
@@ -75,6 +124,13 @@
     margin: 70px 0 100px;
     padding-top: 20px;
 
+    @include mq.sm {
+      font-size: vw.sm(16);
+      margin: vw.sm(40) 0;
+      padding-top: vw.sm(10);
+      align-items: flex-end;
+    }
+
     a {
       color: var(--color-black);
       text-decoration: none;
@@ -84,8 +140,19 @@
       gap: 30px;
       align-items: center;
 
+      @include mq.sm {
+        flex-direction: column;
+        gap: vw.sm(7);
+      }
+
       &:first-of-type .arrow {
         transform: rotate(180deg);
+      }
+
+      @include mq.sm {
+        &:last-of-type .arrow {
+          order: -1;
+        }
       }
 
       .arrow {
@@ -98,6 +165,11 @@
         position: relative;
         z-index: 1;
 
+        @include mq.sm {
+          width: vw.sm(30);
+          height: vw.sm(30);
+        }
+
         &::after {
           box-sizing: border-box;
           content: "";
@@ -109,14 +181,18 @@
           border-radius: 100px;
           z-index: -1;
           transition: 0.3s;
-        }
-        @include mq.md-sm {
-          --arrow-size: 54px;
-        }
 
+          @include mq.sm {
+            height: vw.sm(30);
+          }
+        }
         svg {
           aspect-ratio: 22 / 15;
           width: 17px;
+
+          @include mq.sm {
+            width: vw.sm(10);
+          }
 
           path {
             stroke: var(--color-black);
@@ -145,13 +221,18 @@
         content: "";
         position: absolute;
         @include path.bg-img("svg/box.svg");
+        aspect-ratio: 21 / 12;
         width: 46px;
-        height: 26px;
         top: -35px;
         left: 50%;
         transform: translateX(-50%);
         transform-origin: center;
         transition: 0.3s;
+
+        @include mq.sm {
+          width: vw.sm(27);
+          top: vw.sm(-30);
+        }
       }
 
       @include mq.has-hover {

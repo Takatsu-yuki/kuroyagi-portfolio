@@ -14,7 +14,7 @@ section.work {
   padding-inline: 100px;
 
   @include mq.md-sm {
-    margin-bottom: 70px;
+    margin-bottom: vw.sm(70);
     padding-inline: 0;
   }
   .inner {
@@ -29,10 +29,10 @@ section.work {
     max-width: calc(1232px - var(--padding-inline) * 2);
 
     @include mq.md-sm {
-      padding: 60px 25px;
-      border-radius: 40px;
+      padding: vw.sm(60) vw.sm(25);
+      border-radius: vw.sm(40);
       flex-direction: column;
-      gap: 30px;
+      gap: vw.sm(30);
     }
   }
 
@@ -45,18 +45,22 @@ section.work {
 
     @include mq.md-sm {
       width: 100%;
-      gap: 30px;
+      gap: vw.sm(30);
     }
     .en {
       @include typography.en-regular;
       font-size: clamp(60px, vw.lg(110), 110px);
+
+      @include mq.sm {
+        font-size: vw.sm(60);
+      }
     }
     .ja {
       @include typography.serif-medium;
       font-size: 20px;
 
-      @include mq.md-sm {
-        font-size: 18px;
+      @include mq.sm {
+        font-size: vw.sm(18);
       }
     }
     p {
@@ -64,8 +68,8 @@ section.work {
       font-size: 20px;
       line-height: 2;
 
-      @include mq.md-sm {
-        font-size: 16px;
+      @include mq.sm {
+        @include typography.serif-main-sm;
       }
     }
   }
@@ -103,8 +107,9 @@ section.work {
         position: relative;
         z-index: 1;
 
-        @include mq.md-sm {
-          height: 134px;
+        @include mq.sm {
+          height: vw.sm(134);
+          padding: vw.sm(15);
         }
 
         .arrow {
@@ -115,6 +120,11 @@ section.work {
           display: grid;
           place-content: center;
 
+          @include mq.sm {
+            width: vw.sm(40);
+            height: vw.sm(40);
+          }
+
           &::after {
             content: "";
             position: absolute;
@@ -124,9 +134,10 @@ section.work {
             border-radius: 100px;
             z-index: -1;
             transition: 0.3s;
-          }
-          @include mq.md-sm {
-            --arrow-size: 54px;
+
+            @include mq.sm {
+              height: vw.sm(40);
+            }
           }
         }
 
@@ -139,14 +150,14 @@ section.work {
           font-size: 60px;
           word-break: keep-all;
 
-          @include mq.md-sm {
-            font-size: 40px;
+          @include mq.sm {
+            font-size: vw.sm(40);
           }
 
           span {
             font-size: 51px;
-            @include mq.md-sm {
-              font-size: 34px;
+            @include mq.sm {
+              font-size: vw.sm(34);
             }
           }
         }
@@ -161,7 +172,7 @@ section.work {
           width: 100%;
           height: 100%;
           @include path.bg-img("top/fv-tcg.png", cover);
-          background-position: 50% 32%;
+          background-position: 50% 10%;
           transition: 1s;
           position: absolute;
           transition-timing-function: ease.$custom1;
@@ -187,7 +198,7 @@ section.work {
           width: 100%;
           height: 100%;
           @include path.bg-img("top/fv-cb.png", cover);
-          background-position: 50% 17%;
+          background-position: 50% 12%;
           transition: 1s;
           position: absolute;
           transition-timing-function: ease.$custom1;
