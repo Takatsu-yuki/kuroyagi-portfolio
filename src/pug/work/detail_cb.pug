@@ -15,15 +15,15 @@ mixin detail(num, tag, h3, date, span,p,total = 11)
     block
 
     .btns
-      - const prev = num === 1 ? total : num - 1;
-      - const next = num === total ? 1 : num + 1;
+      - const next = num === 1 ? total : num - 1;
+      - const prev = num === total ? 1 : num + 1;
 
-      a.btn(href=`/tcg/${prev}/`) 
+      a.btn(href=`/cb/${prev}/`) 
         .arrow
           include ../../assets/img/common/arrow.svg
         span 前へ
-      a.back(href="/tcg/") 作品一覧へ戻る
-      a.btn(href=`/tcg/${next}/`)
+      a.back(href="/cb/") 作品一覧へ戻る
+      a.btn(href=`/cb/${next}/`)
         span 次へ
         .arrow
           include ../../assets/img/common/arrow.svg

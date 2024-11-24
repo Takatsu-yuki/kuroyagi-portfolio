@@ -52,6 +52,7 @@ export default makeConfig({
       "work_tcg.css": "work_tcg.scss",
       "work_cb.css": "work_cb.scss",
       "detail_bace.css": "detail_bace.scss",
+      "detail_cb.css": "detail_cb.scss",
       "topics_bace.css": "topics_bace.scss",
     },
   },
