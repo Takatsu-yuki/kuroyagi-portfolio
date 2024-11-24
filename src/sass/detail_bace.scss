@@ -32,7 +32,7 @@
       gap: vw.sm(40);
     }
     .bg {
-      aspect-ratio: 1 / 1;
+      // aspect-ratio: 1 / 1;
       width: 70%;
 
       @include mq.md-sm {
@@ -42,7 +42,6 @@
 
       img {
         width: 100%;
-        height: 100%;
         object-fit: contain;
       }
     }
@@ -56,7 +55,7 @@
 
       span {
         display: block;
-        color: var(--color-yellow);
+        color: var(--color-blue);
         @include typography.serif-main-lg;
 
         @include mq.sm {
@@ -203,7 +202,7 @@
 
       @include mq.has-hover {
         &:hover .arrow::after {
-          background-color: var(--color-yellow);
+          background-color: var(--color-blue);
           border: none;
           transform: scale(1.3);
         }

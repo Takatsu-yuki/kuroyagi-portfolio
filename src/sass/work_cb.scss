@@ -90,9 +90,8 @@
     }
 
     img {
-      aspect-ratio: 460 / 355;
       width: 460px;
-
+      object-fit: contain;
       @include mq.md-sm {
         width: 100%;
         order: 0;
