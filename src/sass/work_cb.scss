@@ -173,10 +173,10 @@
         margin-top: vw.sm(25);
       }
 
-      button {
+      span {
         color: var(--font-gray);
-        background-color: transparent;
-        border: none;
+        display: block;
+        pointer-events: auto;
         @include typography.serif-bold;
         font-size: 20px;
         transition: 0.3s;
