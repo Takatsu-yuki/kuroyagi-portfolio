@@ -6,11 +6,11 @@ block vars
   - titleChild = "WORK";
 
   block links
-    link(href=`${pathToCSS}work_tcg.css${hash}`, rel="stylesheet", type="text/css")
+    link(href=`${pathToCSS}work_cb.css${hash}`, rel="stylesheet", type="text/css")
 mixin muuriItem(num, tag, alt)
   li.item(data-tag=`${tag}`)
     .item-content
-      a(href=`/tcg/${num}/`)
+      a(href="#")
         img(src=`${pathToTcgMin}${num}.png`, alt=`${alt}`)
 
 block main
@@ -20,30 +20,28 @@ block main
         .head
           h3 WORK
           h2
-            | GAME
-            span &amp;
-            | TCG
-          p モンスターデザインやリッチなエフェクトで、かっこいいテイストのイラスト
+            | CHILDENS’
+            | BOOK
+          p 実用書や文学書などに活用しやすい、シンプルでかわいいテイストのイラスト
         nav.menu-box
           .category
-            a(href="/cb/") 児童書向け
-            a ゲーム・TCG向け
+            a(href="#") 児童書向け
+            a(href="#") ゲーム・TCG向け
           .filter-btns
             button.active(data-filter="*") 全て
             button(data-filter="filter01") お仕事
             button(data-filter="filter02") オリジナル
             //- button ファンアート
-      img(src=`${pathToTcgMin}top.png`, alt="", width="200px")
+      img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
     .hr
       hr
-    .padding
-      ul.grid
-        +muuriItem(6, "filter02", "TCG風イラスト")
-        +muuriItem(5, "filter02", "TCG風イラスト")
-        +muuriItem(4, "filter01", "カレンダーコンテスト5月")
-        +muuriItem(3, "filter01", "カレンダーコンテスト5月")
-        +muuriItem(2, "filter01", "カレンダーコンテスト5月")
-        +muuriItem(1, "filter01", "カレンダーコンテスト5月")
+    ul.grid
+      +muuriItem(1, "filter02", "TCG風イラスト")
+      +muuriItem(2, "filter02", "TCG風イラスト")
+      +muuriItem(3, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(4, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(5, "filter01", "カレンダーコンテスト5月")
+      +muuriItem(6, "filter01", "カレンダーコンテスト5月")
 
 block scripts
   //- アニメーションインストール

@@ -19,10 +19,11 @@
     @include decoration.padding-inline;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     @include mq.md-sm {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     @include mq.sm {
@@ -42,7 +43,7 @@
 
       h2 {
         @include typography.en-regular;
-        color: var(--color-blue);
+        color: var(--color-yellow);
         font-size: 130px;
         margin-top: 15px;
         margin-left: -8px;
@@ -55,18 +56,18 @@
           margin-top: vw.sm(25);
         }
 
-        span {
-          font-size: 110px;
+        // span {
+        //   font-size: 110px;
 
-          @include mq.sm {
-            font-size: vw.sm(45);
-          }
-        }
+        //   @include mq.sm {
+        //     font-size: vw.sm(45);
+        //   }
+        // }
       }
 
       p {
         @include typography.serif-main-lg;
-        color: var(--color-blue);
+        color: var(--color-yellow);
 
         @include mq.sm {
           @include typography.serif-main-sm;
@@ -89,8 +90,8 @@
     }
 
     img {
-      aspect-ratio: 534 / 407;
-      width: 534px;
+      aspect-ratio: 460 / 355;
+      width: 460px;
 
       @include mq.md-sm {
         width: 100%;
@@ -142,18 +143,18 @@
           @include typography.serif-main-sm;
         }
 
-        &:first-child {
+        &:last-child {
           border: solid var(--color-black) 2px;
           color: var(--color-black);
           padding: 17px 30px;
 
           @include mq.sm {
-            padding: vw.sm(7) vw.sm(20);
+            padding: vw.sm(8) vw.sm(20);
           }
         }
 
-        &:last-child {
-          background-color: var(--color-blue);
+        &:first-child {
+          background-color: var(--color-yellow);
           color: var(--color-white);
           padding: 19px 32px;
           @include mq.sm {
@@ -186,11 +187,11 @@
         }
 
         &:hover {
-          color: var(--color-blue);
+          color: var(--color-yellow);
         }
 
         &.active {
-          color: var(--color-blue);
+          color: var(--color-yellow);
         }
       }
     }
@@ -201,6 +202,7 @@
 
     @include mq.sm {
       margin-top: vw.sm(15);
+      padding: 0 vw.sm(20);
     }
     hr {
       margin: 0;
@@ -208,42 +210,64 @@
     }
   }
 
-  .grid {
-    --item-margin: 17.5px;
+  .padding {
+    --item-margin-lg: 17.5px;
+    --item-margin-sm: 12.5px;
 
-    position: relative;
-    max-width: calc(1240px + var(--item-margin) * 2);
-    margin: 45px auto;
-    .item {
-      display: block;
-      position: absolute;
-      width: calc(25% - var(--item-margin) * 2);
-      aspect-ratio: 1 / 1;
-      margin: var(--item-margin);
-      z-index: 1;
+    padding-inline: calc(100px - var(--item-margin-lg));
 
-      @include mq.md-sm {
-        width: calc(33.33% - var(--item-margin) * 2);
-      }
+    @include mq.sm {
+      padding-inline: vw.sm(20);
+    }
+
+    .grid {
+      position: relative;
+      max-width: calc(1240px + var(--item-margin-lg) * 2);
+      margin: 45px auto calc(100px - var(--item-margin-lg));
 
       @include mq.sm {
-        width: calc(50% - var(--item-margin) * 2);
+        margin: vw.sm(25) auto vw.sm(60);
       }
-      a {
+      .item {
         display: block;
-        width: 100%;
-        height: 100%;
-        img {
+        position: absolute;
+        width: calc(25% - var(--item-margin-lg) * 2);
+        aspect-ratio: 1 / 1;
+        margin: var(--item-margin-lg);
+        z-index: 1;
+
+        @include mq.md-sm {
+          width: calc(33.33% - var(--item-margin-lg) * 2);
+        }
+
+        @include mq.sm {
+          width: calc(50% - var(--item-margin-sm) * 2);
+          margin: var(--item-margin-sm);
+        }
+        a {
+          display: block;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+
+          @include mq.has-hover {
+            &:hover img {
+              transform: scale(1.1);
+            }
+          }
         }
       }
-    }
-    .item-content {
-      position: relative;
-      width: 100%;
-      height: 100%;
+      .item-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

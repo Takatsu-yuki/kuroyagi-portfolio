@@ -10,8 +10,8 @@ block vars
 mixin muuriItem(num, tag, alt)
   li.item(data-tag=`${tag}`)
     .item-content
-      a(href="#")
-        img(src=`${pathToTcgMin}${num}.png`, alt=`${alt}`)
+      a(href=`/tcg/${num}/`)
+        img(src=`${pathToCbMin}${num}.png`, alt=`${alt}`)
 
 block main
   section.work-bace
@@ -20,28 +20,35 @@ block main
         .head
           h3 WORK
           h2
-            | CHILDENS’
-            | BOOK
+            span CHILDENS’
+            span BOOK
           p 実用書や文学書などに活用しやすい、シンプルでかわいいテイストのイラスト
         nav.menu-box
           .category
-            a(href="#") 児童書向け
-            a(href="#") ゲーム・TCG向け
+            a 児童書向け
+            a(href="/tcg/") ゲーム・TCG向け
           .filter-btns
             button.active(data-filter="*") 全て
             button(data-filter="filter01") お仕事
             button(data-filter="filter02") オリジナル
             //- button ファンアート
-      img(src="/assets/images/work/tcg/top.png", alt="", width="200px")
+      img(src=`${pathToCbMin}top.png`, alt="", width="200px")
     .hr
       hr
-    ul.grid
-      +muuriItem(1, "filter02", "TCG風イラスト")
-      +muuriItem(2, "filter02", "TCG風イラスト")
-      +muuriItem(3, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(4, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(5, "filter01", "カレンダーコンテスト5月")
-      +muuriItem(6, "filter01", "カレンダーコンテスト5月")
+    .padding
+      ul.grid
+        +muuriItem(12, "filter01", "サンタとトナカイのイラスト")
+        +muuriItem(11, "filter02", "きつねのイラスト")
+        +muuriItem(10, "filter01", "ウェルカムボード")
+        +muuriItem(9, "filter01", "七海波音ちゃんのイラスト")
+        +muuriItem(8, "filter01", "ショートケーキのドラゴンのイラスト")
+        +muuriItem(7, "filter01", "ちょうちょと男の子のイラスト")
+        +muuriItem(6, "filter01", "昆虫と子どもたちのイラスト")
+        +muuriItem(5, "filter02", "男の子と小さなモンスターのイラスト")
+        +muuriItem(4, "filter02", "カレンダーコンテスト1月")
+        +muuriItem(3, "filter01", "ごみひろいポスターイラスト")
+        +muuriItem(2, "filter02", "きつねのイラスト")
+        +muuriItem(1, "filter01", "チョコザップ様PR漫画")
 
 block scripts
   //- アニメーションインストール

@@ -148,7 +148,7 @@
           padding: 17px 30px;
 
           @include mq.sm {
-            padding: vw.sm(7) vw.sm(20);
+            padding: vw.sm(8) vw.sm(20);
           }
         }
 
@@ -253,7 +253,6 @@
             height: 100%;
             object-fit: cover;
             transition: 0.5s;
-            // transition-timing-function: ease.$custom1;
           }
 
           @include mq.has-hover {
