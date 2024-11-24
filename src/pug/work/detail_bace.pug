@@ -15,10 +15,12 @@ mixin detail(num,tag, h3, date, span)
         p
           block
     .btns
-      .btn.pre
-        include ../../assets/img/common/arrow.svg
+      a.btn(href="#") 
+        .arrow
+          include ../../assets/img/common/arrow.svg
         span 前へ
-      span.back 作品一覧へ戻る
-      .btn
+      a.back(href="/tcg/") 作品一覧へ戻る
+      a.btn(href="#")
         span 次へ
-        include ../../assets/img/common/arrow.svg
+        .arrow
+          include ../../assets/img/common/arrow.svg

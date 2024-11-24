@@ -1,0 +1,38 @@
+mixin detail(num,tag, h3, date, span)
+  block vars
+    - lev1ID = "top";
+    - lev = 2;
+    - titleChild = "WORK";
+
+    block links
+      link(href=`${pathToCSS}detail_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+  block main
+    section.detail
+      .main
+        .bg
+          img(src=`${pathToTcgBig}${num}.png`)
+          //- img(src=`${pathToTcgBig}${num}.png`, style="background-size: contain; background-img: `${pathToTcgBig}${num}.png`")
+        .info
+          span #{ tag }
+          h3 #{ h3 }
+          dl
+            dt 制作時期
+            dd #{ date }
+            dt 制作期間
+            dd #{ span }
+          p
+            block
+      .btns
+        .btn
+          .arrow
+            include ../../assets/img/common/arrow.svg
+          span 前へ
+        span.back 作品一覧へ戻る
+        .btn
+          span 次へ
+          .arrow
+            include ../../assets/img/common/arrow.svg
+
+  block scripts
+    script(src=`${pathToJS}main.js`)

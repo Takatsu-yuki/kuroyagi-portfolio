@@ -112,6 +112,7 @@
       aspect-ratio: 35 / 25;
       height: var(--button-height);
       z-index: 3;
+      pointer-events: auto;
 
       @include mq.sm {
         width: vw.sm(28);
@@ -215,7 +216,6 @@
       }
 
       li {
-        display: flex;
         flex-direction: column;
 
         a {
