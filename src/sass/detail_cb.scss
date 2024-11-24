@@ -155,7 +155,6 @@
       }
 
       .arrow {
-        aspect-ratio: 1 / 1;
         --arrow-size: 55px;
         width: var(--arrow-size);
         height: var(--arrow-size);
@@ -164,6 +163,7 @@
         place-content: center;
         position: relative;
         z-index: 1;
+        flex-shrink: 0;
 
         @include mq.sm {
           width: vw.sm(30);

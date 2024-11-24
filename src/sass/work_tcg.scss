@@ -89,7 +89,7 @@
     }
 
     img {
-      aspect-ratio: 534 / 407;
+      object-fit: contain;
       width: 534px;
 
       @include mq.md-sm {

@@ -163,6 +163,7 @@
         place-content: center;
         position: relative;
         z-index: 1;
+        flex-shrink: 0;
 
         @include mq.sm {
           width: vw.sm(30);
