@@ -133,7 +133,7 @@
         transition: 0.3s ease.$custom1;
 
         @include mq.sm {
-          height: 2px;
+          height: 3px;
         }
 
         &:first-of-type {

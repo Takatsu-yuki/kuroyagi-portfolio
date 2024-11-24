@@ -131,19 +131,20 @@ section.contact {
     path {
       stroke: var(--color-white);
     }
-
-    &:hover {
-      color: var(--color-black);
-    }
-    &:hover::after {
-      transform: scale(150);
-      opacity: 1;
-    }
-    &:hover path {
-      stroke: var(--color-black);
-    }
-    &:hover svg {
-      transform: translateX(30%);
+    @include mq.has-hover {
+      &:hover {
+        color: var(--color-black);
+      }
+      &:hover::after {
+        transform: scale(150);
+        opacity: 1;
+      }
+      &:hover path {
+        stroke: var(--color-black);
+      }
+      &:hover svg {
+        transform: translateX(30%);
+      }
     }
   }
 }

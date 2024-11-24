@@ -17,7 +17,10 @@ section.fv {
 
   @include mq.md-sm {
     flex-direction: column;
-    margin-bottom: 60px;
+  }
+
+  @include mq.sm {
+    margin-bottom: vw.sm(60);
   }
 
   a {
@@ -33,18 +36,17 @@ section.fv {
     }
 
     .button {
-      --padding-inline: 60px;
-
+      box-sizing: border-box;
       position: absolute;
       bottom: 0;
-      width: calc(100% - var(--padding-inline) * 2);
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0 var(--padding-inline) var(--padding-inline) var(--padding-inline);
-      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+      padding: 60px;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
 
-      @include mq.md-sm {
-        --padding-inline: 30px;
+      @include mq.sm {
+        padding: vw.sm(30);
       }
 
       .arrow {
@@ -66,9 +68,14 @@ section.fv {
           border-radius: 100px;
           z-index: -1;
           transition: 0.3s;
+
+          @include mq.sm {
+            height: vw.sm(54);
+          }
         }
-        @include mq.md-sm {
-          --arrow-size: 54px;
+        @include mq.sm {
+          width: vw.sm(54);
+          height: vw.sm(54);
         }
       }
 
@@ -77,20 +84,23 @@ section.fv {
         font-size: 70px;
         word-break: keep-all;
 
-        @include mq.md-sm {
-          font-size: 40px;
+        @include mq.sm {
+          font-size: vw.sm(40);
         }
 
         span {
           font-size: 60px;
-          @include mq.md-sm {
-            font-size: 34px;
+          @include mq.sm {
+            font-size: vw.sm(34);
           }
         }
       }
 
       .ja {
         @include typography.serif-bold;
+        @include mq.sm {
+          @include typography.serif-main-sm;
+        }
       }
     }
 
