@@ -39,6 +39,7 @@ export default makeConfig({
       "cb/9/index.html": "cb_9.pug",
       "cb/10/index.html": "cb_10.pug",
       "cb/11/index.html": "cb_11.pug",
+      "cb/12/index.html": "cb_12.pug",
       "topics/1/index.html": "topics_1.pug",
     },
   },
