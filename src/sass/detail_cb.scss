@@ -166,8 +166,8 @@
         flex-shrink: 0;
 
         @include mq.sm {
-          width: vw.sm(30);
-          height: vw.sm(30);
+          width: 30px;
+          height: 30px;
         }
 
         &::after {
@@ -183,7 +183,7 @@
           transition: 0.3s;
 
           @include mq.sm {
-            height: vw.sm(30);
+            height: 30px;
           }
         }
         svg {
