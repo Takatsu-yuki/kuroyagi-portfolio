@@ -11,7 +11,7 @@ mixin muuriItem(num, tag, alt)
   li.item(data-tag=`${tag}`)
     .item-content
       a(href=`/tcg/${num}/`)
-        img(src=`${pathToTcgMin}${num}.png`, alt=`${alt}`)
+        img(src=`${pathToTcgMin}${num}.jpeg`, alt=`${alt}`)
 
 block main
   section.work-bace
@@ -33,7 +33,7 @@ block main
             span(data-filter="filter01") お仕事
             span(data-filter="filter02") オリジナル
             //- button ファンアート
-      img(src=`${pathToTcgMin}top.png`, alt="", width="200px")
+      img(src=`${pathToTcgMin}top.jpeg`, alt="", width="200px")
     .hr
       hr
     .padding

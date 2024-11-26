@@ -1,6 +1,6 @@
 "use strict";
 
-navigation;
+// navigation
 const nav = document.querySelector("nav");
 const hambergarBtn = document.getElementById("hambergar-btn");
 const navTitle = document.querySelectorAll(".inner li");

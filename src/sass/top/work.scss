@@ -171,7 +171,7 @@ section.work {
         & figure {
           width: 100%;
           height: 100%;
-          @include path.bg-img("top/fv-tcg.png", cover);
+          @include path.bg-img("top/fv-tcg.jpeg", cover);
           background-position: 50% 10%;
           transition: 1s;
           position: absolute;
@@ -197,7 +197,7 @@ section.work {
         & figure {
           width: 100%;
           height: 100%;
-          @include path.bg-img("top/fv-cb.png", cover);
+          @include path.bg-img("top/fv-cb.jpeg", cover);
           background-position: 50% 12%;
           transition: 1s;
           position: absolute;
