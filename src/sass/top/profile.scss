@@ -27,19 +27,20 @@ section.profile {
       padding: vw.sm(40) vw.sm(25);
       flex-direction: column;
       gap: vw.sm(30);
+      display: block;
     }
 
     .icon {
       @include path.bg-img("top/profile-icon.jpg");
       width: 31%;
-      height: 31%;
+      // height: 31%;
       aspect-ratio: 1 / 1;
       border-radius: vw.lg(50);
       position: sticky;
       top: 40px;
 
       @include mq.sm {
-        height: 60%;
+        // height: 60%;
         width: 60%;
         position: static;
         margin: 0 auto;

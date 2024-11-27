@@ -56,7 +56,8 @@
       span {
         display: block;
         color: var(--color-blue);
-        @include typography.serif-main-lg;
+        @include typography.serif-bold;
+        font-size: 12px;
 
         @include mq.sm {
           font-size: vw.sm(11);
