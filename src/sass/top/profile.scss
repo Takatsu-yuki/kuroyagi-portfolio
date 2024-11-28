@@ -20,6 +20,7 @@ section.profile {
 
   .inner {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 100px 100px 90px 100px;
 
@@ -27,7 +28,7 @@ section.profile {
       padding: vw.sm(40) vw.sm(25);
       flex-direction: column;
       gap: vw.sm(30);
-      display: block;
+      display: grid;
     }
 
     .icon {
