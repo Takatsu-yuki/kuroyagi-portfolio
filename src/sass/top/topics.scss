@@ -66,6 +66,7 @@ section.topics {
       }
 
       a {
+        pointer-events: none;
         display: block;
         text-decoration: none;
         color: var(--color-black);

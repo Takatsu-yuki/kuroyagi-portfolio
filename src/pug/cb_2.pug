@@ -2,15 +2,15 @@ extends _template/_base
 include work/detail_cb
 
 block vars
-  - lev1ID = "work";
+  - lev1ID = "works";
   - lev = 2;
-  - titleChild = "作品一覧";
+  - titleChild = "WORKS";
 
   block links
     link(href=`${pathToCSS}detail_cb.css${hash}`, rel="stylesheet", type="text/css")
 
 block main
-  +detail(2,"CHILDRENS’BOOK | オリジナル","博物マニアオリジナルグッズ用イラスト" , "2024.05", "3日","6月の博物マニアに向けてオリジナルグッズを制作しました。（トートバッグ、メタルボールチェーン、アクリルキーホルダー等）")
+  +detail(2,"CHILDREN’S BOOK | オリジナル","博物マニアオリジナルグッズ用イラスト" , "2024.05", "3日","6月の博物マニアに向けてオリジナルグッズを制作しました。（トートバッグ、メタルボールチェーン、アクリルキーホルダー等）")
 
 block scripts
   script(src=`${pathToJS}main.js`)

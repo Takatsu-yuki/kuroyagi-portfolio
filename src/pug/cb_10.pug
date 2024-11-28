@@ -2,15 +2,15 @@ extends _template/_base
 include work/detail_cb
 
 block vars
-  - lev1ID = "work";
+  - lev1ID = "works";
   - lev = 2;
-  - titleChild = "作品一覧";
+  - titleChild = "WORKS";
 
   block links
     link(href=`${pathToCSS}detail_cb.css${hash}`, rel="stylesheet", type="text/css")
 
 block main
-  +detail(10,"CHILDRENS’BOOK | お仕事","ウェルカムボード制作" , "2024.02", "7日","知人のウェルカムボードを制作しました。")
+  +detail(10,"CHILDREN’S BOOK | お仕事","ウェルカムボード制作" , "2024.02", "7日","知人のウェルカムボードを制作しました。")
 
 block scripts
   script(src=`${pathToJS}main.js`)
