@@ -41,6 +41,8 @@ export default makeConfig({
       "cb/11/index.html": "cb_11.pug",
       "cb/12/index.html": "cb_12.pug",
       "topics/1/index.html": "topics_1.pug",
+      "topics/2/index.html": "topics_2.pug",
+      "topics/3/index.html": "topics_3.pug",
     },
   },
   sass: {

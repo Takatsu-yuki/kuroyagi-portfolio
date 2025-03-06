@@ -10,4 +10,199 @@
 @use "_include/geom";
 
 .topics-page {
+  padding-block: 100px;
+  color: var(--color-black);
+
+  @include mq.sm {
+    padding-block: vw.sm(40);
+  }
+
+  .inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1080px;
+    padding-inline: 20px;
+    margin: 0 auto;
+    @include mq.sm {
+      padding-inline: vw.sm(20);
+    }
+    h2 {
+      @include typography.en-bold;
+      font-size: 50px;
+      margin-bottom: 60px;
+
+      @include mq.sm {
+        font-size: vw.sm(40);
+        margin-bottom: vw.sm(20);
+      }
+    }
+    time {
+      @include typography.serif-medium;
+      font-size: 25px;
+      display: block;
+      margin-bottom: 10px;
+
+      @include mq.sm {
+        font-size: vw.sm(16);
+        margin-bottom: vw.sm(10);
+      }
+    }
+    h3 {
+      @include typography.serif-bold;
+      font-size: 25px;
+      margin-bottom: 60px;
+      line-height: 1.7;
+
+      @include mq.sm {
+        font-size: vw.sm(16);
+        margin-bottom: vw.sm(20);
+      }
+    }
+    .bg {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 100px;
+      margin-bottom: 60px;
+      border-radius: 50px;
+      background-color: var(--color-gray);
+
+      @include mq.sm {
+        padding: vw.sm(40) vw.sm(30);
+        border-radius: vw.sm(50);
+        margin-bottom: vw.sm(20);
+      }
+
+      & > .img {
+        width: 100%;
+        margin-bottom: 60px;
+
+        @include mq.sm {
+          margin-bottom: vw.sm(20);
+        }
+
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      p {
+        @include typography.serif-main-lg;
+        margin-bottom: 60px;
+
+        @include mq.sm {
+          font-size: vw.sm(16);
+          margin-bottom: vw.sm(20);
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include mq.sm {
+          gap: vw.sm(20);
+        }
+        .img {
+          width: 100%;
+          height: 590px;
+
+          @include mq.sm {
+            height: vw.sm(204);
+          }
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            max-height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .others {
+      width: 100%;
+
+      @include mq.sm {
+        padding-bottom: vw.sm(50);
+      }
+      h3 {
+        @include typography.serif-bold;
+        font-size: 25px;
+        width: 100%;
+        border-bottom: 1px solid var(--color-black);
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+
+        @include mq.sm {
+          font-size: vw.sm(20);
+          padding-block: vw.sm(20);
+          margin-bottom: vw.sm(30);
+        }
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        justify-content: flex-end;
+
+        @include mq.sm {
+          flex-direction: column;
+          gap: vw.sm(50);
+        }
+
+        li {
+          list-style: none;
+          width: 33.33%;
+          text-align: left;
+
+          @include mq.sm {
+            width: 100%;
+          }
+          a {
+            text-decoration: none;
+            color: var(--color-black);
+            figure {
+              overflow: hidden;
+              margin-bottom: 20px;
+
+              @include mq.sm {
+                margin-bottom: vw.sm(20);
+              }
+              img {
+                width: 100%;
+                max-width: 100%;
+                transition: 0.5s ease.$custom1;
+
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+            .inner {
+              padding: 0;
+
+              time {
+                font-size: 12px;
+                margin-bottom: 10px;
+                font-weight: 700;
+
+                @include mq.sm {
+                  font-size: vw.sm(12);
+                  margin-bottom: vw.sm(10);
+                }
+              }
+              p {
+                @include typography.serif-medium;
+                line-height: 1.7;
+
+                @include mq.sm {
+                  font-size: vw.sm(16);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

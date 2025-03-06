@@ -1,0 +1,16 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2024-11-29", "2024.11.29", "サウザンロード相模台商店街掲示のごみひろいポスターを制作いたしました。", 2, "相模原市のサウザンロード相模台商店街に掲示される、サウザンロード隊ごみひろいポスターのイラストとデザインを担当いたしました。")
+
+block scripts
+  script(src=`${pathToJS}main.js`)

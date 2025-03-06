@@ -74,10 +74,17 @@ section.topics {
         @include mq.sm {
           @include typography.serif-main-sm;
         }
+        figure {
+          overflow: hidden;
+          img {
+            aspect-ratio: 383 / 234;
+            width: 100%;
+            transition: 0.5s ease.$custom1;
 
-        img {
-          aspect-ratio: 383 / 234;
-          width: 100%;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
         }
 
         .inner {
