@@ -1,5 +1,5 @@
 extends _template/_base
-include work/detail_bace
+include work/detail_tcg
 
 block vars
   - lev1ID = "works";
@@ -7,7 +7,7 @@ block vars
   - titleChild = "WORKS";
 
   block links
-    link(href=`${pathToCSS}detail_bace.css${hash}`, rel="stylesheet", type="text/css")
+    link(href=`${pathToCSS}detail_tcg.css${hash}`, rel="stylesheet", type="text/css")
 
 block main
   +detail(2,"GAME&TCG | オリジナル","魔法のうさぎ" , "2023.03", "2日","夢叶えるキャラクターコンテストに応募した作品です。")
