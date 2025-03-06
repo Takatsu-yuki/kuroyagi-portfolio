@@ -1,0 +1,25 @@
+include ../top/topics_list
+
+mixin topics(date, time, h3, num, p,)
+  section.topics-page
+    .inner
+      h2 TOPICS
+      time(datetime=date)= time
+      h3 #{ h3 }
+      .bg
+        img(src=`${pathToTopics}${num}.jpg`)
+        p !{ p }
+        block
+      .others
+        h3 その他のお知らせ
+          .ul
+            - var listNam = num;
+            if listNam === 1
+              +columnItem_2
+              +columnItem_3
+            else if listNam === 2
+              +columnItem_1
+              +columnItem_3
+            else if listNam === 3
+              +columnItem_1
+              +columnItem_2

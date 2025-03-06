@@ -1,0 +1,18 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2024-11-29", "2024.11.29", "小学一年生2025年1月号(小学館)イラスト担当いたしました。", 1, "挿絵数点担当させていただきました。<br>児童書向けの絵柄で描かせていただきました。")
+    .content
+      .img
+        img(src=`${pathToTopics}1_1.jpg`, alt="")
+      .img
+        img(src=`${pathToTopics}1_2.jpg`, alt="")

@@ -1,19 +1,10 @@
-mixin columnItem(num, date)
-  li: a(href=`/topics/${num}/`)
-    figure
-      img(src=`${pathToTop}topics_${num}.jpg`)
-    .inner
-      span.date #{ date }
-      block
+include topics_list
 
 section#topics.topics
   h2
     .en TOPICS
     .ja お知らせ
   ul
-    +columnItem('01', '2024.11.29')
-      p 小学一年生2025年1月号（小学館）イラスト担当いたしました。
-    +columnItem('02', '2024.11.29')
-      p サウザンロード相模台商店街掲示のごみひろいポスターを制作いたしました。
-    +columnItem('03', '2024.11.29')
-      p 三陸鉄道イーハトーブカレンダー2025に採用されました。
+    +columnItem_1
+    +columnItem_2
+    +columnItem_3
