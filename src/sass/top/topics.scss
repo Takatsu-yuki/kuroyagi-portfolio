@@ -81,8 +81,10 @@ section.topics {
             width: 100%;
             transition: 0.5s ease.$custom1;
 
-            &:hover {
-              transform: scale(1.1);
+            @include mq.has-hover {
+              &:hover {
+                transform: scale(1.1);
+              }
             }
           }
         }
