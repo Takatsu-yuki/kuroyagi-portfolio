@@ -1,5 +1,3 @@
-<img width="1440" alt="スクリーンショット 2025-04-14 20 06 09" src="https://github.com/user-attachments/assets/e72ee9cf-9ae8-4c7b-8fd5-874bba50b6d3" />クライアントワーク
-
 # イラストレーターくろやぎ様　ポートフォリオサイト
 
 [visit site ↗︎](https://yaginoie.site/)
