@@ -26,4 +26,4 @@ SNSで活動しているイラストレーターくろやぎ様のポートフ�
  ✅ PugとSassにて変数、ミックスインを活用し、修正、更新の効率化
 
 Webpackを使用した実装に挑戦しました。
-使用したWebpackのリンク
+[使用したWebpack ↗︎](https://github.com/yohak/yohak-webpack-boilerplate)
