@@ -1,0 +1,23 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2024-12-24", "2024.12.24", "どこでもキャッチャー様とのコラボにて、イラスト3点がオンラインクレーンゲームのプライズとなりました。", 4, "冬のプライズでしたので、冬毛でもこもこしたデフォルメのたぬきときつねのイラストを制作しました。<br>トートバッグはイラスト面が大きいので、周りの人がクスっと笑えるようなイラストを目指しました。")
+    .content
+      .img
+        img(src=`${pathToTopics}4_1.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}4_2.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}4_3.webp`, alt="")
+
+block scripts
+  script(src=`${pathToJS}main.js`)

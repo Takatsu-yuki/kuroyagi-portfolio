@@ -47,65 +47,71 @@ section.topics {
       }
     }
   }
-
-  ul {
-    display: flex;
-    gap: 40px;
+  .cont {
     margin-top: 45px;
 
     @include mq.sm {
       margin-top: vw.sm(30);
-      flex-direction: column;
-      gap: vw.sm(30);
     }
-    li {
-      width: calc(33.33% - 20px);
+
+    ul {
+      gap: 40px;
+      display: flex;
+      justify-content: center;
 
       @include mq.sm {
-        width: 100%;
+        flex-direction: column;
+        gap: vw.sm(30);
       }
-
-      a {
-        display: block;
-        text-decoration: none;
-        color: var(--color-black);
-        @include typography.serif-main-lg;
+      li {
+        width: calc(33.33% - 20px);
 
         @include mq.sm {
-          @include typography.serif-main-sm;
+          width: 100%;
         }
-        figure {
-          overflow: hidden;
-          img {
-            aspect-ratio: 383 / 234;
-            width: 100%;
-            transition: 0.5s ease.$custom1;
 
-            @include mq.has-hover {
-              &:hover {
-                transform: scale(1.1);
+        a {
+          display: block;
+          text-decoration: none;
+          color: var(--color-black);
+          @include typography.serif-main-lg;
+
+          @include mq.sm {
+            @include typography.serif-main-sm;
+          }
+          figure {
+            overflow: hidden;
+            img {
+              aspect-ratio: 383 / 234;
+              width: 100%;
+              transition: 0.5s ease.$custom1;
+
+              @include mq.has-hover {
+                &:hover {
+                  transform: scale(1.1);
+                }
               }
             }
           }
-        }
 
-        .inner {
-          width: 100%;
-          margin: 25px 0 45px 0;
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+          .inner {
+            width: 100%;
+            margin: 25px 0 45px 0;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
-          @include mq.sm {
-            margin: vw.sm(25) 0 vw.sm(45) 0;
-            gap: vw.sm(10);
-          }
-          span {
-            display: block;
-            font-size: 12px;
             @include mq.sm {
-              font-size: vw.sm(12);
+              margin: vw.sm(25) 0 vw.sm(45) 0;
+              gap: vw.sm(10);
+            }
+            span {
+              display: block;
+              font-size: 12px;
+              @include mq.sm {
+                font-size: vw.sm(12);
+              }
             }
           }
         }

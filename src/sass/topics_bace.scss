@@ -140,19 +140,22 @@
         }
       }
       ul {
-        width: 100%;
-        display: flex;
+        width: 79%;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 50px;
         justify-content: flex-end;
 
         @include mq.sm {
+          display: flex;
           flex-direction: column;
           gap: vw.sm(50);
         }
 
         li {
           list-style: none;
-          width: 33.33%;
+          width: 100%;
           text-align: left;
 
           @include mq.sm {

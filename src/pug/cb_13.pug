@@ -1,0 +1,23 @@
+extends _template/_base
+include work/detail_cb
+
+block vars
+  - lev1ID = "works";
+  - lev = 2;
+  - titleChild = "WORKS";
+
+  block links
+    link(href=`${pathToCSS}detail_cb.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +detail(13,"CHILDREN’S BOOK | お仕事","オンラインクレーンゲームプライズイラスト" , "2024.11", "2日","どこでもキャッチャー様とのコラボにて、イラスト3点がオンラインクレーンゲームのプライズとなりました。")
+    .content
+      figure.first
+        img(src=`${pathToCbBig}13_1.webp`)
+      figure
+        img(src=`${pathToCbBig}13_2.webp`)
+      figure
+        img(src=`${pathToCbBig}13_3.webp`)
+
+block scripts
+  script(src=`${pathToJS}main.js`)

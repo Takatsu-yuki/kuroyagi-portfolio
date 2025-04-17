@@ -40,9 +40,13 @@ export default makeConfig({
       "cb/10/index.html": "cb_10.pug",
       "cb/11/index.html": "cb_11.pug",
       "cb/12/index.html": "cb_12.pug",
+      "cb/13/index.html": "cb_13.pug",
+      "cb/14/index.html": "cb_14.pug",
       "topics/1/index.html": "topics_1.pug",
       "topics/2/index.html": "topics_2.pug",
       "topics/3/index.html": "topics_3.pug",
+      "topics/4/index.html": "topics_4.pug",
+      "topics/5/index.html": "topics_5.pug",
     },
   },
   sass: {

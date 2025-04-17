@@ -1,0 +1,23 @@
+extends _template/_base
+include work/detail_cb
+
+block vars
+  - lev1ID = "works";
+  - lev = 2;
+  - titleChild = "WORKS";
+
+  block links
+    link(href=`${pathToCSS}detail_cb.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +detail(14,"CHILDREN’S BOOK | お仕事","まちがいさがし制作" , "2024.08", "4日","マイウェイ出版様『たっぷりわくわく！まちがいさがしタイム VOL.11』モノクロまちがいさがしを4点制作しました。")
+    .content
+      figure.first
+        img(src=`${pathToCbBig}14_1.webp`)
+      figure
+        img(src=`${pathToCbBig}14_2.webp`)
+      figure
+        img(src=`${pathToCbBig}14_3.webp`)
+
+block scripts
+  script(src=`${pathToJS}main.js`)
