@@ -19,11 +19,11 @@ SNSで活動しているイラストレーターくろやぎ様のポートフ�
 - マークアップ：HTML(Pug) / CSS(Sass)
 - ライブラリ：Muuri（作品フィルタリング機能）
 - ビルドツール：Webpack
+  - [使用したWebpack ↗︎](https://github.com/yohak/yohak-webpack-boilerplate)
 
 ## 👩‍💻実装内容
  ✅ レスポンシブ対応 (PC / スマートフォン)  
  ✅ 作品のフィルタリング機能 (作品一覧ページ / Muuriを使用)  
  ✅ PugとSassにて変数、ミックスインを活用し、修正、更新の効率化
 
-Webpackを使用した実装に挑戦しました。
-[使用したWebpack ↗︎](https://github.com/yohak/yohak-webpack-boilerplate)
+
