@@ -1,9 +1,9 @@
 {
-  "name": "yohak-webpack-boilerplate",
-  "version": "0.0.1",
+  "name": "kuroyagi-portfolio",
+  "version": "1.0.0",
   "main": "index.js",
-  "author": "Satoshi Onoda",
-  "license": "MIT",
+  "author": "Yuki Takatsu",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "prepare": "husky",
