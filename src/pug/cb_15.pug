@@ -1,0 +1,39 @@
+extends _template/_base
+include work/detail_cb
+
+block vars
+  - lev1ID = "works";
+  - lev = 2;
+  - titleChild = "WORKS";
+
+  block links
+    link(href=`${pathToCSS}detail_cb.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +detail(15,"CHILDREN’S BOOK | お仕事","『おもしろのりもの大集合!』挿絵制作" , "2025.04", "5日","小学館様の学習雑誌『小学一年生』の2025年7月号の挿絵12点制作いたしました。")
+    .content
+      figure
+        img(src=`${pathToCbBig}15_1.webp`)
+      figure
+        img(src=`${pathToCbBig}15_2.webp`)
+      figure
+        img(src=`${pathToCbBig}15_3.webp`)
+      figure
+        img(src=`${pathToCbBig}15_4.webp`)
+      figure
+        img(src=`${pathToCbBig}15_5.webp`)
+      figure
+        img(src=`${pathToCbBig}15_6.webp`)
+      figure
+        img(src=`${pathToCbBig}15_7.webp`)
+      figure
+        img(src=`${pathToCbBig}15_8.webp`)
+      figure
+        img(src=`${pathToCbBig}15_9.webp`)
+      figure
+        img(src=`${pathToCbBig}15_10.webp`)
+      figure
+        img(src=`${pathToCbBig}15_11.webp`)
+
+block scripts
+  script(src=`${pathToJS}main.js`)

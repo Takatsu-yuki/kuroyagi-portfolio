@@ -1,0 +1,39 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2025-05-31", "2025.05.31", "小学館様小学一年生2025年7月号『おもしろのりもの大集合!』カットイラストを制作いたしました。", 6, "女の子が乗り物の解説をしているカットを12点描かせていただきました。")
+    .content_two-columns
+      .img
+        img(src=`${pathToTopics}6_1.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_2.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_3.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_4.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_5.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_6.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_7.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_8.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_9.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_10.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}6_11.webp`, alt="")
+
+block scripts
+  script(src=`${pathToJS}main.js`)
