@@ -1,0 +1,16 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2025-06-24", "2025.06.24", "TeamRABI様のクラウドファンディング企画、うさぎトランプのイラストを描かせていただきました。", 7, "TeamRABI様のクラウドファンディング企画、うさぎトランプのイラストを描かせていただきました。スペード7を担当しております。")
+
+block scripts
+  script(src=`${pathToJS}main.js`)

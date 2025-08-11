@@ -1,0 +1,23 @@
+extends _template/_base
+include topics/topics_bace
+
+block vars
+  - lev1ID = "topics";
+  - lev = 2;
+  - titleChild = "TOPICS";
+
+  block links
+    link(href=`${pathToCSS}topics_bace.css${hash}`, rel="stylesheet", type="text/css")
+
+block main
+  +topics("2025-07-20", "2025.07.20", "神奈川県相模原市鶴ヶ丘自治会のフリーマーケットにて、ぬりえうちわのワークショップを行いました。", 8, "")
+    .content
+      .img
+        img(src=`${pathToTopics}8_1.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}8_2.webp`, alt="")
+      .img
+        img(src=`${pathToTopics}8_3.webp`, alt="")
+
+block scripts
+  script(src=`${pathToJS}main.js`)

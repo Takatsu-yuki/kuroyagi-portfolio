@@ -15,39 +15,39 @@ mixin topics(date, time, h3, num, p,)
         h3 その他のお知らせ
         ul
           - var listNam = num;
-          if listNam === 1
+          if listNam === 3
+            +columnItem_8
+            +columnItem_7
             +columnItem_6
             +columnItem_5
             +columnItem_4
-            +columnItem_3
-            +columnItem_2
-          else if listNam === 2
-            +columnItem_6
-            +columnItem_5
-            +columnItem_4
-            +columnItem_3
-            +columnItem_1
-          else if listNam === 3
-            +columnItem_6
-            +columnItem_5
-            +columnItem_4
-            +columnItem_2
-            +columnItem_1
           else if listNam === 4
+            +columnItem_8
+            +columnItem_7
             +columnItem_6
             +columnItem_5
             +columnItem_3
-            +columnItem_2
-            +columnItem_1
           else if listNam === 5
+            +columnItem_8
+            +columnItem_7
             +columnItem_6
             +columnItem_4
             +columnItem_3
-            +columnItem_2
-            +columnItem_1
           else if listNam === 6
+            +columnItem_8
+            +columnItem_7
             +columnItem_5
             +columnItem_4
             +columnItem_3
-            +columnItem_2
-            +columnItem_1
+          else if listNam === 7
+            +columnItem_8
+            +columnItem_6
+            +columnItem_5
+            +columnItem_4
+            +columnItem_3
+          else if listNam === 8
+            +columnItem_7
+            +columnItem_6
+            +columnItem_5
+            +columnItem_4
+            +columnItem_3
